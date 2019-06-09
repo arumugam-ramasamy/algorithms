@@ -1,4 +1,4 @@
-package com.gaurav.kafka.constants;
+package com.evo.kafka.constants;
 
 public interface IKafkaConstants {
 	public static String KAFKA_BROKERS = "localhost:9092";

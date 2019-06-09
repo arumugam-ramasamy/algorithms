@@ -1,4 +1,4 @@
-package com.gaurav.kafka.partitioner;
+package com.evo.kafka.partitioner;
 
 import java.util.Map;
 

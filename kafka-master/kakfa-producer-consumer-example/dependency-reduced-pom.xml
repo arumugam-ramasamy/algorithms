@@ -28,7 +28,7 @@
             <configuration>
               <transformers>
                 <transformer>
-                  <mainClass>com.gaurav.kafka.App</mainClass>
+                  <mainClass>com.evo.kafka.App</mainClass>
                 </transformer>
               </transformers>
             </configuration>

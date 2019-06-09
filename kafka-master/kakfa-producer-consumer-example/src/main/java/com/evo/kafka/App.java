@@ -1,16 +1,18 @@
-package com.gaurav.kafka;
+package com.evo.kafka;
 
+import java.util.List;
 import java.util.concurrent.ExecutionException;
 
+import com.evo.kafka.constants.IKafkaConstants;
+import com.evo.kafka.consumer.ConsumerCreator;
+import com.evo.kafka.producer.ProducerCreator;
+import com.evo.kafka.utils.ConsumerGroupLag;
 import org.apache.kafka.clients.consumer.Consumer;
 import org.apache.kafka.clients.consumer.ConsumerRecords;
 import org.apache.kafka.clients.producer.Producer;
 import org.apache.kafka.clients.producer.ProducerRecord;
 import org.apache.kafka.clients.producer.RecordMetadata;
-
-import com.gaurav.kafka.constants.IKafkaConstants;
-import com.gaurav.kafka.consumer.ConsumerCreator;
-import com.gaurav.kafka.producer.ProducerCreator;
+import scala.collection.immutable.Stream;
 
 public class App {
 	public static void main(String[] args) {
@@ -20,6 +22,7 @@ public class App {
 
 	static void runConsumer() {
 		Consumer<Object, Object> consumer = ConsumerCreator.createConsumer();
+		ConsumerGroupLag cLag = ConsumerCreator.createLagObject() ;
 
 		int noMessageToFetch = 0;
 
@@ -32,7 +35,15 @@ public class App {
 				else
 					continue;
 			}
-
+			try {
+				List<Long> offsets = cLag.getOffset();
+				for (Long offset : offsets) {
+					System.out.println( "The currentoffset is " + offset);
+				}
+			}
+			catch (Exception e) {
+				System.out.println (e.getStackTrace()) ;
+			}
 			consumerRecords.forEach(record -> {
 				System.out.println("Record Key " + record.key());
 				System.out.println("Record value " + record.value());

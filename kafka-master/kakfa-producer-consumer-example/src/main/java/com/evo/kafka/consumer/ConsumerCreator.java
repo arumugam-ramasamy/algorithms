@@ -1,15 +1,14 @@
-package com.gaurav.kafka.consumer;
+package com.evo.kafka.consumer;
 
 import java.util.Collections;
 import java.util.Properties;
 
+import com.evo.kafka.constants.IKafkaConstants;
+import com.evo.kafka.utils.ConsumerGroupLag;
 import org.apache.kafka.clients.consumer.Consumer;
 import org.apache.kafka.clients.consumer.ConsumerConfig;
 import org.apache.kafka.clients.consumer.KafkaConsumer;
-import org.apache.kafka.common.serialization.LongDeserializer;
 import org.apache.kafka.common.serialization.StringDeserializer;
-
-import com.gaurav.kafka.constants.IKafkaConstants;
 
 public class ConsumerCreator {
 
@@ -26,6 +25,13 @@ public class ConsumerCreator {
 		final Consumer<Object, Object> consumer = new KafkaConsumer<>(props);
 		consumer.subscribe(Collections.singletonList(IKafkaConstants.TOPIC_NAME));
 		return consumer;
+	}
+
+	public static ConsumerGroupLag createLagObject () {
+		ConsumerGroupLag cLag = new ConsumerGroupLag() ;
+		cLag.setBootstrapServer(IKafkaConstants.KAFKA_BROKERS);
+		cLag.setGroup(IKafkaConstants.GROUP_ID_CONFIG);
+		return cLag ;
 	}
 
 }
