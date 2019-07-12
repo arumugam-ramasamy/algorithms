@@ -2,22 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="bde35327-6383-4e32-acf6-501388c65152" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/dependency-reduced-pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/dependency-reduced-pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/evo/kafka/App.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/wf/kafka/App.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/evo/kafka/constants/IKafkaConstants.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/wf/kafka/constants/IKafkaConstants.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/evo/kafka/consumer/ConsumerCreator.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/wf/kafka/consumer/ConsumerCreator.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/evo/kafka/deserializer/CustomDeserializer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/wf/kafka/deserializer/CustomDeserializer.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/evo/kafka/partitioner/CustomPartitioner.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/wf/kafka/partitioner/CustomPartitioner.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/evo/kafka/pojo/CustomObject.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/wf/kafka/pojo/CustomObject.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/evo/kafka/producer/ProducerCreator.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/wf/kafka/producer/ProducerCreator.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/evo/kafka/serializer/CustomSerializer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/wf/kafka/serializer/CustomSerializer.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/evo/kafka/utils/ConsumerGroupLag.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/wf/kafka/utils/ConsumerGroupLag.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/evo/kafka/utils/KafkaApiRequest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/wf/kafka/utils/KafkaApiRequest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/evo/kafka/utils/OffsetFetchException.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/wf/kafka/utils/OffsetFetchException.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/evo/kafka/utils/TopicPartitionsOffsetInfo.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/wf/kafka/utils/TopicPartitionsOffsetInfo.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../kafka-utilities-master/ConsumerGroupLag/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../../kafka-utilities-master/ConsumerGroupLag/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__com_fasterxml_jackson_core_jackson_core_2_9_5.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__com_fasterxml_jackson_core_jackson_databind_2_9_5.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/kakfa-producer-consumer-example.iml" beforeDir="false" afterPath="$PROJECT_DIR$/kakfa-producer-consumer-example.iml" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/classes/" />
     <ignored path="$PROJECT_DIR$/target/" />
@@ -180,9 +167,9 @@
       </MavenImportingSettings>
     </option>
   </component>
-  <component name="ProjectFrameBounds">
-    <option name="x" value="414" />
-    <option name="y" value="42" />
+  <component name="ProjectFrameBounds" extendedState="1">
+    <option name="x" value="198" />
+    <option name="y" value="99" />
     <option name="width" value="1440" />
     <option name="height" value="858" />
   </component>
@@ -300,18 +287,18 @@
       <workItem from="1561529306127" duration="3384000" />
       <workItem from="1562550459891" duration="1119000" />
       <workItem from="1562552998019" duration="187000" />
-      <workItem from="1562553215758" duration="2770000" />
+      <workItem from="1562553215758" duration="4006000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="18964000" />
+    <option name="totallyTimeSpent" value="20200000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="414" y="42" width="1440" height="858" extended-state="0" />
+    <frame x="198" y="99" width="1440" height="858" extended-state="1" />
     <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.20977011" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.3591954" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Designer" order="2" />
       <window_info id="Image Layers" order="3" />
