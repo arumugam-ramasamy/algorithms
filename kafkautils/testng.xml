@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<suite name="TestNgParametersSuite" parallel="false">
+<parameter name="exampleDesc" value="localhost:2181"></parameter>
+<test name="TestNgParametersTest">
+    <classes>
+        <class
+                name="com.evo.kafka.utils.KafkaUtilsTest" />
+    </classes>
+</test>
+</suite>
