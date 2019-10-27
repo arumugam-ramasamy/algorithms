@@ -1,6 +1,0 @@
-com/evo/ks/KafkaApiRequest.class
-com/evo/ks/ConsumerGroupLag$PartitionState.class
-com/evo/ks/OffsetFetchException.class
-com/evo/ks/ConsumerGroupLag.class
-com/evo/util/KafkaUtils.class
-com/evo/ks/TopicPartitionsOffsetInfo.class
