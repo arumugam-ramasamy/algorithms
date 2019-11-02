@@ -1,7 +1,7 @@
-public boolean monkeyTrouble(boolean aSmile, boolean bSmile) {
-    if ((aSmile == true && bSmile == true) || (aSmile == false && bSmile == false )){
-	return true ;
+public int sumDouble(int a, int b) {
+    if ( a == b) {
+	return (2 * (a+b)) ;
     }
-    return false ;
+    return (a+b) ;
   
 }
