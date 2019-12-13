@@ -5,25 +5,8 @@
       <change beforePath="$PROJECT_DIR$/../../java/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../../java/.idea/compiler.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../../java/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../../java/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/dependency-reduced-pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/dependency-reduced-pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/wf/kafka/App.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/evo/kafka/App.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/wf/kafka/constants/IKafkaConstants.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/evo/kafka/constants/IKafkaConstants.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/wf/kafka/consumer/ConsumerCreator.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/evo/kafka/consumer/ConsumerCreator.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/wf/kafka/deserializer/CustomDeserializer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/evo/kafka/deserializer/CustomDeserializer.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/wf/kafka/partitioner/CustomPartitioner.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/evo/kafka/partitioner/CustomPartitioner.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/wf/kafka/pojo/CustomObject.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/evo/kafka/pojo/CustomObject.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/wf/kafka/producer/ProducerCreator.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/evo/kafka/producer/ProducerCreator.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/wf/kafka/serializer/CustomSerializer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/evo/kafka/serializer/CustomSerializer.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/wf/kafka/utils/ConsumerGroupLag.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/evo/kafka/utils/ConsumerGroupLag.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/wf/kafka/utils/KafkaApiRequest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/evo/kafka/utils/KafkaApiRequest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/wf/kafka/utils/OffsetFetchException.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/evo/kafka/utils/OffsetFetchException.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/wf/kafka/utils/TopicPartitionsOffsetInfo.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/evo/kafka/utils/TopicPartitionsOffsetInfo.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../kafka-utilities-master/ConsumerGroupLag/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../../kafka-utilities-master/ConsumerGroupLag/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../kafka-utilities-master/ConsumerGroupLag/ConsumerGroupLag.iml" beforeDir="false" afterPath="$PROJECT_DIR$/../../kafka-utilities-master/ConsumerGroupLag/ConsumerGroupLag.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../kafka-utilities-master/ConsumerGroupLag/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../../kafka-utilities-master/ConsumerGroupLag/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../kafka-utilities-master/ConsumerGroupLag/src/main/java/com/evo/util/KafkaUtils.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../kafka-utilities-master/ConsumerGroupLag/src/main/java/com/evo/util/KafkaUtils.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../../kafkautils/kafkautils.iml" beforeDir="false" afterPath="$PROJECT_DIR$/../../kafkautils/kafkautils.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../kafkautils/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../../kafkautils/pom.xml" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/classes/" />
     <ignored path="$PROJECT_DIR$/target/" />
@@ -48,31 +31,19 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/evo/kafka/utils/ConsumerGroupLag.java">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/evo/kafka/pojo/CustomObject.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1470">
-              <caret line="128" column="70" selection-start-line="128" selection-start-column="70" selection-end-line="128" selection-end-column="70" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
+            <state relative-caret-position="195">
+              <caret line="13" selection-start-line="13" selection-end-line="13" />
             </state>
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main/java/com/evo/kafka/App.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="450">
-              <caret line="41" column="13" selection-start-line="41" selection-start-column="13" selection-end-line="41" selection-end-column="13" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/evo/kafka/utils/KafkaApiRequest.java">
-          <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="405">
-              <caret line="34" selection-start-line="34" selection-end-line="34" />
+              <caret line="38" column="33" selection-start-line="38" selection-start-column="33" selection-end-line="39" selection-end-column="25" />
             </state>
           </provider>
         </entry>
@@ -113,11 +84,20 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/com/evo/kafka/constants/IKafkaConstants.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="315">
-              <caret line="21" selection-start-line="21" selection-end-line="21" />
+            <state relative-caret-position="30">
+              <caret line="2" column="17" selection-start-line="2" selection-start-column="17" selection-end-line="2" selection-end-column="17" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/evo/kafka/deserializer/CustomDeserializer.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="60">
+              <caret line="9" column="13" selection-start-line="9" selection-start-column="13" selection-end-line="9" selection-end-column="13" />
             </state>
           </provider>
         </entry>
@@ -183,8 +163,8 @@
     </option>
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="198" />
-    <option name="y" value="99" />
+    <option name="x" value="312" />
+    <option name="y" value="164" />
     <option name="width" value="1440" />
     <option name="height" value="858" />
   </component>
@@ -195,7 +175,6 @@
     </navigator>
     <panes>
       <pane id="Scope" />
-      <pane id="PackagesPane" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -238,17 +217,68 @@
               <item name="com" type="462c0819:PsiDirectoryNode" />
               <item name="kafka" type="462c0819:PsiDirectoryNode" />
             </path>
+            <path>
+              <item name="kakfa-producer-consumer-example" type="b2602c69:ProjectViewProjectNode" />
+              <item name="kakfa-producer-consumer-example" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="com" type="462c0819:PsiDirectoryNode" />
+              <item name="kafka" type="462c0819:PsiDirectoryNode" />
+              <item name="constants" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="kakfa-producer-consumer-example" type="b2602c69:ProjectViewProjectNode" />
+              <item name="kakfa-producer-consumer-example" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="com" type="462c0819:PsiDirectoryNode" />
+              <item name="kafka" type="462c0819:PsiDirectoryNode" />
+              <item name="consumer" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="kakfa-producer-consumer-example" type="b2602c69:ProjectViewProjectNode" />
+              <item name="kakfa-producer-consumer-example" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="com" type="462c0819:PsiDirectoryNode" />
+              <item name="kafka" type="462c0819:PsiDirectoryNode" />
+              <item name="deserializer" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="kakfa-producer-consumer-example" type="b2602c69:ProjectViewProjectNode" />
+              <item name="kakfa-producer-consumer-example" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="com" type="462c0819:PsiDirectoryNode" />
+              <item name="kafka" type="462c0819:PsiDirectoryNode" />
+              <item name="pojo" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="kakfa-producer-consumer-example" type="b2602c69:ProjectViewProjectNode" />
+              <item name="kakfa-producer-consumer-example" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="com" type="462c0819:PsiDirectoryNode" />
+              <item name="kafka" type="462c0819:PsiDirectoryNode" />
+              <item name="producer" type="462c0819:PsiDirectoryNode" />
+            </path>
           </expand>
           <select />
         </subPane>
       </pane>
+      <pane id="PackagesPane" />
     </panes>
   </component>
   <component name="PropertiesComponent">
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../../kafka-utilities-master/ConsumerGroupLag/pom.xml" />
+    <property name="last_opened_file_path" value="$USER_HOME$/kafka/spring-boot-kafka-producer-example-master/pom.xml" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
     <property name="project.structure.last.edited" value="Modules" />
@@ -319,16 +349,20 @@
       <workItem from="1568782598353" duration="1789000" />
       <workItem from="1569121854040" duration="1229000" />
       <workItem from="1570766921900" duration="235000" />
+      <workItem from="1572207751790" duration="2114000" />
+      <workItem from="1573017327849" duration="1252000" />
+      <workItem from="1573960984358" duration="1199000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="26448000" />
+    <option name="totallyTimeSpent" value="31013000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="198" y="99" width="1440" height="858" extended-state="0" />
+    <frame x="312" y="164" width="1440" height="858" extended-state="0" />
+    <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.40014368" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.41954023" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Designer" order="2" />
       <window_info id="Image Layers" order="3" />
@@ -413,13 +447,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/evo/kafka/deserializer/CustomDeserializer.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="60">
-          <caret line="9" column="13" selection-start-line="9" selection-start-column="13" selection-end-line="9" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/pom.xml">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="270">
@@ -428,20 +455,6 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/evo/kafka/consumer/ConsumerAdvanced.java" />
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/evo/kafka/pojo/CustomObject.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="195">
-          <caret line="13" selection-start-line="13" selection-end-line="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/evo/kafka/consumer/ConsumerCreator.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="645">
-          <caret line="51" column="8" selection-start-line="51" selection-start-column="8" selection-end-line="51" selection-end-column="8" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/evo/kafka/utils/ConsumerGroupLag.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1470">
@@ -452,17 +465,24 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/evo/kafka/App.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="450">
-          <caret line="41" column="13" selection-start-line="41" selection-start-column="13" selection-end-line="41" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/evo/kafka/utils/KafkaApiRequest.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="405">
           <caret line="34" selection-start-line="34" selection-end-line="34" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/evo/kafka/consumer/ConsumerCreator.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="645">
+          <caret line="51" column="8" selection-start-line="51" selection-start-column="8" selection-end-line="51" selection-end-column="8" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/evo/kafka/pojo/CustomObject.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="195">
+          <caret line="13" selection-start-line="13" selection-end-line="13" />
         </state>
       </provider>
     </entry>
@@ -494,13 +514,27 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/evo/kafka/constants/IKafkaConstants.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="30">
+          <caret line="2" column="17" selection-start-line="2" selection-start-column="17" selection-end-line="2" selection-end-column="17" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/evo/kafka/deserializer/CustomDeserializer.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="60">
+          <caret line="9" column="13" selection-start-line="9" selection-start-column="13" selection-end-line="9" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/.classpath">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/evo/kafka/constants/IKafkaConstants.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/evo/kafka/App.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="315">
-          <caret line="21" selection-start-line="21" selection-end-line="21" />
+        <state relative-caret-position="405">
+          <caret line="38" column="33" selection-start-line="38" selection-start-column="33" selection-end-line="39" selection-end-column="25" />
         </state>
       </provider>
     </entry>

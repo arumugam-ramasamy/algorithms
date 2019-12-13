@@ -11,5 +11,5 @@ OP_SUB: '-';
 OP_MUL: '*';
 OP_DIV: '/';
 
-INT: [1-9];
+LONG: [0-9]+;
 WS: [ \t\r]+ -> skip;

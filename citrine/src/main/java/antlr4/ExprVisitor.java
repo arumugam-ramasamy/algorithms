@@ -1,5 +1,5 @@
 // Generated from C:/work/litterbin/demos/antlr-expr/src/main/java/expr1/grammar\Expr.g4 by ANTLR 4.5.1
-package expr1.grammar;
+package antlr4;
 import org.antlr.v4.runtime.tree.ParseTreeVisitor;
 
 /**

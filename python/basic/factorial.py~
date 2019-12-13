@@ -1,0 +1,22 @@
+import sys
+
+def factorialr (num) :
+    if (num <= 1):
+        return 1
+    return n * factorialr(num-1)
+
+def factorial(num) :
+    if (num <= 1):
+        return num
+    factv = 1
+    for i in range(2:num):
+        factv = factv * i
+    return factv
+
+def main():
+    # print command line arguments
+    print factorialr(sys.argv[1])
+    print factorial(sys.argv[1])
+            
+if __name__ == "__main__":
+    main()

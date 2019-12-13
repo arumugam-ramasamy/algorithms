@@ -1,0 +1,10 @@
+def add(num1, num2) :
+    return (float(num1) + float(num2)) ;
+
+def main():
+    # print command line arguments
+    for arg in sys.argv[1:]:
+        add(sys.argv[1], sys.argv[2]) 
+            
+if __name__ == "__main__":
+    main()

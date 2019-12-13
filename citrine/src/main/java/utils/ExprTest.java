@@ -1,40 +1,43 @@
+package utils;
+
+import org.antlr.v4.runtime.tree.ParseTree;
+import org.antlr.v4.tool.Grammar;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
-import utils.Unit;
 
 public class ExprTest {
     public static  Logger logger = LoggerFactory.getLogger("APP") ;
-    static Unit unit ;
+    static Unit unit = new Unit() ;
 
     private Object expr(String expression) {
         if (logger.isDebugEnabled()) {
             logger.debug("Entered expr tree");
         }
-        /*ParseTree parseTree = ExpressionUtils.createParseTree(expression);
+        ParseTree parseTree = ExprUtils.createParseTree(expression);
         return new ExprSIVisitor()
-                .visit(parseTree);*/
-        return null ;
+                .visit(parseTree);
+        //return null ;
     }
 
     public String transform(String inputunits) {
 
-        inputunits = inputunits.replaceAll("minute", "1") ;
-        inputunits = inputunits.replaceAll("hour", "2") ;
-        inputunits = inputunits.replaceAll("day", "3") ;
-        inputunits = inputunits.replaceAll("degree", "4") ;
-        inputunits = inputunits.replaceAll("arcminute", "5") ;
-        inputunits = inputunits.replaceAll("arcsecond", "6") ;
-        inputunits = inputunits.replaceAll("hectare", "7") ;
-        inputunits = inputunits.replaceAll("litre", "8") ;
-        inputunits = inputunits.replaceAll("tonne", "9") ;
-        inputunits = inputunits.replaceAll("min", "1") ;
-        inputunits = inputunits.replaceAll("h", "2") ;
-        inputunits = inputunits.replaceAll("d", "3") ;
-        inputunits = inputunits.replaceAll("'", "5") ;
-        inputunits = inputunits.replaceAll("\"", "6") ;
-        inputunits = inputunits.replaceAll("ha", "7") ;
-        inputunits = inputunits.replaceAll("L", "8") ;
-        inputunits = inputunits.replaceAll("t", "9") ;
+        inputunits = inputunits.replaceAll("minute", GrammarConstants.getMINUTEString()) ;
+        inputunits = inputunits.replaceAll("hour", GrammarConstants.getHOURString()) ;
+        inputunits = inputunits.replaceAll("day", GrammarConstants.getDAYString()) ;
+        inputunits = inputunits.replaceAll("degree", GrammarConstants.getDEGREEString()) ;
+        inputunits = inputunits.replaceAll("arcminute", GrammarConstants.getARCMINUTEString()) ;
+        inputunits = inputunits.replaceAll("arcsecond", GrammarConstants.getARCSECONDString()) ;
+        inputunits = inputunits.replaceAll("hectare", GrammarConstants.getHECTAREString()) ;
+        inputunits = inputunits.replaceAll("litre", GrammarConstants.getLITREString()) ;
+        inputunits = inputunits.replaceAll("tonne", GrammarConstants.getTONNEString()) ;
+        inputunits = inputunits.replaceAll("min", GrammarConstants.getMINUTEString()) ;
+        inputunits = inputunits.replaceAll("h", GrammarConstants.getHOURString()) ;
+        inputunits = inputunits.replaceAll("d", GrammarConstants.getDAYString()) ;
+        inputunits = inputunits.replaceAll("'", GrammarConstants.getARCMINUTEString()) ;
+        inputunits = inputunits.replaceAll("\"", GrammarConstants.getARCSECONDString()) ;
+        inputunits = inputunits.replaceAll("ha", GrammarConstants.getHECTAREString()) ;
+        inputunits = inputunits.replaceAll("L", GrammarConstants.getLITREString()) ;
+        inputunits = inputunits.replaceAll("t", GrammarConstants.getTONNEString()) ;
         return  inputunits ;
     }
 
@@ -45,6 +48,9 @@ public class ExprTest {
         String transformed =  eTest.transform(args[0]) ;
         System.out.println(transformed);
         eTest.expr(transformed) ;
+        ParseTree parseTree = ExprUtils.createParseTree(transformed);
+        Object expr = new ExprSIVisitor().visit(parseTree) ;
+        unit.printUnits();
     }
 }
 
