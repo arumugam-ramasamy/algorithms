@@ -21,7 +21,8 @@ public class Rand{
 		int rand9 = rand.nextInt(1000); 
 		out.write(rand1 + "," + rand2 + "," + rand3 + "," + rand4 + "," + rand5 + "," + rand6 +
 			  "," + rand7 + "," + rand8 + "," + rand9 + "\n");
-		Thread.sleep(5) ;
+		//Thread.sleep(3000) ;
+		TimeUnit.SECONDS.sleep(3);
 	    }
 	}
 	catch (InterruptedException e) {
@@ -29,23 +30,5 @@ public class Rand{
 	catch (IOException e) {
 	}
 
-  // create instance of Random class 
-        Random rand = new Random(); 
-  
-        // Generate random integers in range 0 to 999 
-        int rand_int1 = rand.nextInt(1000); 
-        int rand_int2 = rand.nextInt(1000); 
-  
-        // Print random integers 
-        System.out.println("Random Integers: "+rand_int1); 
-        System.out.println("Random Integers: "+rand_int2); 
-  
-        // Generate Random doubles 
-        double rand_dub1 = rand.nextDouble(); 
-        double rand_dub2 = rand.nextDouble(); 
-  
-        // Print random doubles 
-        System.out.println("Random Doubles: "+rand_dub1); 
-        System.out.println("Random Doubles: "+rand_dub2); 
     } 
 } 

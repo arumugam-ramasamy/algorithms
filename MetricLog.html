@@ -112,51 +112,20 @@
 	</div>
 
 </div>
-<script type="text/javascript" src="text-file-follower.js"></script>
-<script>
 
-var follow = require('text-file-follower');
+<script src = "/socket.io/socket.io.js"></script>
+<script>
 // set up our data series with 150 random data points
 
 var seriesData = [ [], [], [], [], [], [], [], [], [] ];
-var  timeInterval = 1;
-  var count = 1 ;
+var random = new Rickshaw.Fixtures.RandomData(150);
+//var  timeInterval = 1;
+var count = 1 ;
 
-   var index = seriesData[0].length;
+for (var i = 0; i < 150; i++) {
+	random.addData(seriesData);
+}
 
-
-var allEventsCallback = function(event, filename, value) {
-  switch (event) {
-    case 'line':
-      var timeBase = Math.floor(new Date().getTime() / 1000);
-      ind = 0 ;
-      metrics = value.split(",") ;
-      if (count > 150) {
-	  for (i = 0 ; i < seriesData.length ; i++) {
-	      seriesData[i].shift() ;
-	  }
-	  timeBase += timeInterval ;
-      }
-      for (i = 0 ; i < metrics.length ; i++){
-	  seriesData[i].push({ x: (index * timeInterval) + timeBase, y: metrics[i] } );
-      }
-
-      break;
-    case 'error':
-      console.log("Oh noes! Here's the error message: " + value);
-      break;
-  }
-};
- 
-// Pass options and a callback
-var follower = follow(
-                '/home/pranav/nodejs/random.log',
-                { persistent: true },
-                allEventsCallback);
- 
-// Totally redundant with the listener callback, but...
-follower.on('all', allEventsCallback);
- 
 var palette = new Rickshaw.Color.Palette( { scheme: 'classic9' } );
 
 // instantiate our graph!
@@ -201,9 +170,31 @@ var graph = new Rickshaw.Graph( {
 	]
 } );
 
-  graph.render();
+graph.render();
 
-  
+var index = seriesData[0].length;
+
+     var socket = io();
+  socket.on('line', function(data){
+      //      document.write(data)
+      var timeBase = Math.floor(new Date().getTime() / 1000);
+      console.log("came to line " + data) ;
+//      ind = 0 ;
+//      metrics = data.split(",") ;
+//      if (count > 150) {
+//	  for (i = 0 ; i < seriesData.length ; i++) {
+//	      seriesData[i].shift() ;
+//	  }
+//	  timeBase += timeInterval ;
+//      }
+//      for (i = 0 ; i < metrics.length ; i++){
+//	  seriesData[i].push({ x: (index * timeInterval) + timeBase, y: metrics[i] } );
+//      }
+//      count = count+1 ;
+      	random.removeData(seriesData);
+random.addData(seriesData);
+      graph.update() ;
+  });
 
 var preview = new Rickshaw.Graph.RangeSlider( {
 	graph: graph,
@@ -285,12 +276,12 @@ var messages = [
 	"Added documentation for new methods"
 ];
 
-setInterval( function() {
-	random.removeData(seriesData);
-	random.addData(seriesData);
-	graph.update();
-
-}, 3000 );
+//setInterval( function() {
+//	random.removeData(seriesData);
+//	random.addData(seriesData);
+//	graph.update();
+//
+//}, 3000 );
 
 function addAnnotation(force) {
 	if (messages.length > 0 && (force || Math.random() >= 0.95)) {
@@ -309,7 +300,6 @@ var previewXAxis = new Rickshaw.Graph.Axis.Time({
 });
 
 previewXAxis.render();
-follower.close();
 
 </script>
 

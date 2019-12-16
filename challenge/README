@@ -1,0 +1,11 @@
+To Build
+
+1) from source root, mvn install
+
+To run
+
+1) cd target
+2) java -jar challenge.jar
+
+// The program , given probablilty, selects the char from the set that matches the probability in log N steps
+ // where N is the size of the array.
