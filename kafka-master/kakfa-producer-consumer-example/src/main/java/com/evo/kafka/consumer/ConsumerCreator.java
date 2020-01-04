@@ -1,8 +1,6 @@
 package com.evo.kafka.consumer;
 
-import java.util.Collection;
-import java.util.Collections;
-import java.util.Properties;
+import java.util.*;
 
 import com.evo.kafka.constants.IKafkaConstants;
 import com.evo.kafka.utils.ConsumerGroupLag;
@@ -48,7 +46,13 @@ public class ConsumerCreator {
 		props.put(ConsumerConfig.AUTO_OFFSET_RESET_CONFIG, IKafkaConstants.OFFSET_RESET_EARLIER);
 
 		final Consumer<Object, Object> consumer = new KafkaConsumer<>(props);
-		consumer.subscribe(Collections.singletonList(IKafkaConstants.TOPIC_NAME), listener);
+		//consumer.subscribe(Collections.singletonList(IKafkaConstants.TOPIC_NAME), listener);
+		TopicPartition tp = new TopicPartition("test", 0);
+		TopicPartition tp1 = new TopicPartition("test",1 );
+		List<TopicPartition> tps = new ArrayList<>();
+		tps.add(tp) ;
+		tps.add(tp1) ;
+		consumer.assign(tps);
 		return consumer;
 	}
 

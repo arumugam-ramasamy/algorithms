@@ -1,5 +1,6 @@
 package com.evo.kafka;
 
+import java.util.ArrayList;
 import java.util.List;
 import java.util.concurrent.ExecutionException;
 
@@ -12,16 +13,18 @@ import org.apache.kafka.clients.consumer.ConsumerRecords;
 import org.apache.kafka.clients.producer.Producer;
 import org.apache.kafka.clients.producer.ProducerRecord;
 import org.apache.kafka.clients.producer.RecordMetadata;
+import org.apache.kafka.common.TopicPartition;
 
 public class App {
 	public static void main(String[] args) {
-		runProducer();
+		//runProducer();
 		runConsumer();
 	}
 
 	static void runConsumer() {
 		Consumer<Object, Object> consumer = ConsumerCreator.createConsumer();
-		ConsumerGroupLag cLag = ConsumerCreator.createLagObject() ;
+
+		//ConsumerGroupLag cLag = ConsumerCreator.createLagObject() ;
 
 		int noMessageToFetch = 0;
 
@@ -34,7 +37,7 @@ public class App {
 				else
 					continue;
 			}
-			try {
+			/*try {
 				List<Long> offsets = cLag.getOffset();
 				for (Long offset : offsets) {
 					System.out.println( "The currentoffset is " + offset);
@@ -42,7 +45,7 @@ public class App {
 			}
 			catch (Exception e) {
 				System.out.println (e.getStackTrace()) ;
-			}
+			}*/
 			consumerRecords.forEach(record -> {
 				System.out.println("Record Key " + record.key());
 				System.out.println("Record value " + record.value());
