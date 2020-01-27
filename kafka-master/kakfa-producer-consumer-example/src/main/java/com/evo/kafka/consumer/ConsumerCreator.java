@@ -44,15 +44,17 @@ public class ConsumerCreator {
 		props.put(ConsumerConfig.MAX_POLL_RECORDS_CONFIG, IKafkaConstants.MAX_POLL_RECORDS);
 		props.put(ConsumerConfig.ENABLE_AUTO_COMMIT_CONFIG, "false");
 		props.put(ConsumerConfig.AUTO_OFFSET_RESET_CONFIG, IKafkaConstants.OFFSET_RESET_EARLIER);
-
+		System.out.println ("Came here before kafka consumer") ;
 		final Consumer<Object, Object> consumer = new KafkaConsumer<>(props);
 		//consumer.subscribe(Collections.singletonList(IKafkaConstants.TOPIC_NAME), listener);
+		System.out.println ("Came here after kafka consumer") ;
 		TopicPartition tp = new TopicPartition("test", 0);
 		TopicPartition tp1 = new TopicPartition("test",1 );
 		List<TopicPartition> tps = new ArrayList<>();
 		tps.add(tp) ;
 		tps.add(tp1) ;
 		consumer.assign(tps);
+		System.out.println ("Came here after kafka consumer what ") ;
 		return consumer;
 	}
 

@@ -1,19 +1,18 @@
 package com.evo.kafka;
 
-import java.util.ArrayList;
-import java.util.List;
-import java.util.concurrent.ExecutionException;
-
 import com.evo.kafka.constants.IKafkaConstants;
 import com.evo.kafka.consumer.ConsumerCreator;
 import com.evo.kafka.producer.ProducerCreator;
-import com.evo.kafka.utils.ConsumerGroupLag;
+import com.evo.kafka.utils.BtrokerStatus;
 import org.apache.kafka.clients.consumer.Consumer;
 import org.apache.kafka.clients.consumer.ConsumerRecords;
 import org.apache.kafka.clients.producer.Producer;
 import org.apache.kafka.clients.producer.ProducerRecord;
 import org.apache.kafka.clients.producer.RecordMetadata;
-import org.apache.kafka.common.TopicPartition;
+import org.apache.kafka.common.KafkaException;
+import org.apache.kafka.common.errors.WakeupException;
+
+import java.util.concurrent.ExecutionException;
 
 public class App {
 	public static void main(String[] args) {
@@ -29,14 +28,25 @@ public class App {
 		int noMessageToFetch = 0;
 
 		while (true) {
-			final ConsumerRecords<Object, Object> consumerRecords = consumer.poll(1000);
-			if (consumerRecords.count() == 0) {
-				noMessageToFetch++;
-				if (noMessageToFetch > IKafkaConstants.MAX_NO_MESSAGE_FOUND_COUNT)
-					break;
-				else
-					continue;
-			}
+			try {
+				System.out.println ("This is where we are stuck") ;
+				final ConsumerRecords<Object, Object> consumerRecords = consumer.poll(100);
+				if (BtrokerStatus.isBrokerRunning() == false) {
+					System.out.println ("broker is not running") ;
+				}
+				else {
+					System.out.println ("broker is running") ;
+				}
+				if (consumerRecords.count() == 0) {
+					System.out.println("Zero Records") ;
+				}
+			/*	if (consumerRecords.count() == 0) {
+					noMessageToFetch++;
+					if (noMessageToFetch > IKafkaConstants.MAX_NO_MESSAGE_FOUND_COUNT)
+						break;
+					else
+						continue;
+				}*/
 			/*try {
 				List<Long> offsets = cLag.getOffset();
 				for (Long offset : offsets) {
@@ -46,15 +56,35 @@ public class App {
 			catch (Exception e) {
 				System.out.println (e.getStackTrace()) ;
 			}*/
-			consumerRecords.forEach(record -> {
-				System.out.println("Record Key " + record.key());
-				System.out.println("Record value " + record.value());
-				System.out.println("Record partition " + record.partition());
-				System.out.println("Record offset " + record.offset());
-			});
-			consumer.commitAsync();
+				consumerRecords.forEach(record -> {
+					System.out.println("Record Key " + record.key());
+					System.out.println("Record value " + record.value());
+					System.out.println("Record partition " + record.partition());
+					System.out.println("Record offset " + record.offset());
+				});
+				consumer.commitAsync();
+			} catch (WakeupException e) {
+				System.out.println ("came here due to kafka stop wakeup exception") ;
+				System.out.println(e.getStackTrace().toString());
+			} catch (KafkaException  e) {
+				System.out.println ("came here due to kafka stop") ;
+				System.out.println(e.getStackTrace().toString());
+				consumer.close();
+			} catch (Exception e) {
+				System.out.println ("came here due to kafka stop in any exception") ;
+				System.out.println(e.getStackTrace().toString());
+				while (BtrokerStatus.isBrokerRunning() == false) {
+					try {
+						Thread.sleep(100);
+					} catch (InterruptedException e1) {
+						System.out.println(" it is running now ") ;
+					}
+				}
+			}
 		}
-		consumer.close();
+		//System.out.println("came out") ;
+
+
 	}
 
 	static void runProducer() {

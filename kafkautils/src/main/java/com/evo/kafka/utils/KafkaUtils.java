@@ -40,6 +40,7 @@ public class KafkaUtils {
                     connectionTimeoutMs, maxInFlightRequests,
                     time, metricGroup, metricType);
             adminZkClient = new AdminZkClient(zkClient);
+            adminZkClient.
         }
         catch (Exception e) {
            throw new ConnectionException(this.zookeeper, e.getStackTrace().toString(), e, this.getClass()) ;
