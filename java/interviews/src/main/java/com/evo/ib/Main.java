@@ -77,28 +77,33 @@ public class Main {
         LinkedList ll = new LinkedList() ;
         int count = 10 ;
         for (int i = 0 ; i <  count ; i++) {
-            int val = rand.nextInt(upperbound) % 10 ;
-            if (i > (count/2) ) {
-                while (val == 0)
-                    val = rand.nextInt(upperbound) % 10 ;
-                val = 9 ;
+            ll.insertNode(i);
+            //int val = rand.nextInt(upperbound) % 10 ;
+          /*  if (i > (count/2) ) {
+                //while (val == 0)
+                    //val = rand.nextInt(upperbound) % 10 ;
+                    val = i ;
+                // val = 9 ;
             }
-            ll.insertNode(val);
+            //ll.insertNode(val);
+        */
+
         }
         ll.printll(ll.getHead());
         LinkedList l2 = new LinkedList() ;
         count = 6 ;
         for (int i = 0 ; i <  6 ; i++) {
-            int val = rand.nextInt(upperbound) % 10 ;
+            /*int val = rand.nextInt(upperbound) % 10 ;
             if (i == (count -1) ) {
                 while (val == 0)
-                    val = rand.nextInt(upperbound) % 10 ;
-            }
-            l2.insertNode(val);
+                   // val = rand.nextInt(upperbound) % 10 ;
+                    val = i ;
+            }*/
+            l2.insertNode(i);
         }
         l2.printll(l2.getHead());
-        l2.printll(addTwoNumbers(ll.getHead(), l2.getHead()));
-
+       // l2.printll(addTwoNumbers(ll.getHead(), l2.getHead()));
+        ll.printll(ll.mergeSortedLinkedList(ll.getHead(), l2.getHead())) ;
  /*        ListNode rev = ll.reverseLL() ;
          ll.printll(rev);
          ll.printll(ll.middleLL());

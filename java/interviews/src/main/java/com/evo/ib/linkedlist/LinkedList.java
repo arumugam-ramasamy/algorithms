@@ -1,5 +1,9 @@
 package com.evo.ib.linkedlist;
 
+import org.w3c.dom.Node;
+
+import java.util.List;
+
 public class LinkedList {
     ListNode head ;
     ListNode cur ;
@@ -77,5 +81,36 @@ public class LinkedList {
             slowListNode = slowListNode.getNext() ;
         }
         return slowListNode;
+    }
+
+    public ListNode mergeSortedLinkedList (ListNode l1, ListNode l2) {
+
+        ListNode  dummyNode = new ListNode() ;
+        dummyNode.setVal( -1);
+        ListNode headDummyNode = dummyNode ;
+        //ListNode prev = null  ;
+
+        if (l1 == null) return l2 ;
+        if (l2 == null) return l1 ;
+
+        while (l1 != null && l2 != null) {
+            ListNode insNode ;
+            if (l1.getVal() <= l2.getVal()) {
+               insNode = l1 ;
+                l1 = l1.getNext() ;
+            }
+            else {
+               insNode = l2 ;
+               l2 = l2.getNext() ;
+            }
+            dummyNode.setNext(insNode);
+            //prev = dummyNode ;
+            dummyNode = dummyNode.getNext() ;
+
+        }
+
+        if (l1 == null) dummyNode.setNext(l2);
+        if (l2 == null) dummyNode.setNext(l1);
+        return headDummyNode.getNext();
     }
 }
