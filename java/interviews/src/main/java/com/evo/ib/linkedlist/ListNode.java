@@ -1,6 +1,6 @@
 package com.evo.ib.linkedlist;
 
-public class ListNode {
+public class ListNode  {
     public int val ;
     public ListNode next ;
 
@@ -19,4 +19,5 @@ public class ListNode {
     public void setNext(ListNode next) {
         this.next = next;
     }
+
 }

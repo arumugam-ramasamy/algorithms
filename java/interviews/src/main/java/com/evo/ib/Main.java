@@ -1,10 +1,11 @@
 package com.evo.ib;
 
 
+import com.evo.ib.linkedlist.LinkedCompare;
 import com.evo.ib.linkedlist.LinkedList;
 import com.evo.ib.linkedlist.ListNode;
 
-import java.util.Random;
+import java.util.*;
 
 public class Main {
 
@@ -70,45 +71,93 @@ public class Main {
         return head ;
     }
 
-    public static void main(String[] args) {
-	// write your code here
+    public static ListNode mergeKLinkedList (List<ListNode> lls){
+        Comparator<LinkedCompare> dataSorter = Comparator.comparing(LinkedCompare::getData);
+        Queue<LinkedCompare> priorityQueue = new PriorityQueue<>(dataSorter);
+        for (int i = 0 ; i < lls.size() ; i++) {
+            priorityQueue.add(new LinkedCompare(lls.get(i).getVal(), i)) ;
+        }
+        ListNode headMerged = null ;
+        ListNode curMerged = headMerged ;
+       LinkedCompare curQueue = priorityQueue.poll() ;
+
+        while (curQueue != null) {
+            ListNode curNode = lls.get(curQueue.getInd()) ;
+            if (headMerged == null) {
+                headMerged = curNode ;
+                curMerged = headMerged ;
+            }
+            else {
+                curMerged.setNext(curNode);
+                curMerged = curMerged.getNext() ;
+            }
+            curNode = curNode.getNext() ;
+            lls.set(curQueue.getInd(), curNode)  ;
+            if (curNode != null)
+                priorityQueue.add(new LinkedCompare(curNode.getVal(), curQueue.getInd())) ;
+            curQueue = priorityQueue.poll() ;
+        }
+        curMerged.setNext(null);
+        return headMerged ;
+    }
+
+    public static void testMergeLinkedList() {
         Random rand = new Random() ;
         int upperbound = 100 ;
+        List<ListNode> arrList = new ArrayList<>() ;
         LinkedList ll = new LinkedList() ;
-        int count = 10 ;
+        int count = rand.nextInt(10) + 1 ;
         for (int i = 0 ; i <  count ; i++) {
-            ll.insertNode(i);
-            //int val = rand.nextInt(upperbound) % 10 ;
-          /*  if (i > (count/2) ) {
-                //while (val == 0)
-                    //val = rand.nextInt(upperbound) % 10 ;
-                    val = i ;
-                // val = 9 ;
-            }
-            //ll.insertNode(val);
-        */
-
+            int val = rand.nextInt(upperbound)  + (i * upperbound) ;
+            ll.insertNode(val) ;
         }
         ll.printll(ll.getHead());
+        arrList.add(ll.getHead()) ;
         LinkedList l2 = new LinkedList() ;
-        count = 6 ;
-        for (int i = 0 ; i <  6 ; i++) {
-            /*int val = rand.nextInt(upperbound) % 10 ;
-            if (i == (count -1) ) {
-                while (val == 0)
-                   // val = rand.nextInt(upperbound) % 10 ;
-                    val = i ;
-            }*/
-            l2.insertNode(i);
+        count = rand.nextInt(10) + 1 ; ;
+        for (int i = 0 ; i <  count ; i++) {
+            int val = rand.nextInt(upperbound)  + (i * upperbound) ;
+            l2.insertNode(val) ;
         }
         l2.printll(l2.getHead());
+        arrList.add(l2.getHead()) ;
+        l2 = new LinkedList() ;
+        count = rand.nextInt(10) + 1 ; ;
+        for (int i = 0 ; i <  count ; i++) {
+            int val = rand.nextInt(upperbound)  + (i * upperbound) ;
+            l2.insertNode(val) ;
+        }
+        l2.printll(l2.getHead());
+        arrList.add(l2.getHead()) ;
+        l2 = new LinkedList() ;
+        count = rand.nextInt(10) + 1 ; ;
+        for (int i = 0 ; i <  count ; i++) {
+            int val = rand.nextInt(upperbound)  + (i * upperbound) ;
+            l2.insertNode(val) ;
+        }
+        l2.printll(l2.getHead());
+        arrList.add(l2.getHead()) ;
+        l2 = new LinkedList() ;
+        count = rand.nextInt(10) + 1 ; ;
+        for (int i = 0 ; i <  count ; i++) {
+            int val = rand.nextInt(upperbound)  + (i * upperbound) ;
+            l2.insertNode(val) ;
+        }
+        l2.printll(l2.getHead());
+        arrList.add(l2.getHead()) ;
+        l2.printll(mergeKLinkedList(arrList))  ;
+    }
+
+    public static void main(String[] args) {
+	// write your code here
+
        // l2.printll(addTwoNumbers(ll.getHead(), l2.getHead()));
-        ll.printll(ll.mergeSortedLinkedList(ll.getHead(), l2.getHead())) ;
+        //ll.printll(ll.mergeSortedLinkedList(ll.getHead(), l2.getHead())) ;
  /*        ListNode rev = ll.reverseLL() ;
          ll.printll(rev);
          ll.printll(ll.middleLL());
 */
-
+        testMergeLinkedList();
 
     }
 }
