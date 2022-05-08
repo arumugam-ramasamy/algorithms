@@ -1,6 +1,7 @@
 package com.evo.ib;
 
 
+import com.evo.ib.arrays.ArrayProblems;
 import com.evo.ib.linkedlist.LinkedCompare;
 import com.evo.ib.linkedlist.LinkedList;
 import com.evo.ib.linkedlist.ListNode;
@@ -147,7 +148,60 @@ public class Main {
         arrList.add(l2.getHead()) ;
         l2.printll(mergeKLinkedList(arrList))  ;
     }
+    public static void testRemoveDuplicates () {
+        List <Integer> arr = new ArrayList<>() ;
+        Random rand = new Random() ;
+        int prov = 0 ;
+        int upperbound =5 ;
+        for (int i = 0 ; i < 100 ; i++) {
+            if (rand.nextInt(100) < 25)
+                arr.add(rand.nextInt(upperbound) + (i* upperbound)) ;
+            else {
+                if (i > 0)
+                arr.add(arr.get(i - 1));
+                else {
+                    arr.add(0) ;
+                }
+            }
+        }
+        ArrayProblems.printArr(arr) ;
+        ArrayProblems.removeDuplicates(arr);
+        ArrayProblems.printArr(arr);
 
+    }
+
+    public static void testRemoveDuplicateaArr () {
+        int total = 2 ;
+        int[] arr = new int[total] ;
+        Random rand = new Random() ;
+        int prov = 0 ;
+        int upperbound =5 ;
+        for (int i = 0 ; i < total ; i++) {
+            if (rand.nextInt(100) < 25)
+                arr[i] = (rand.nextInt(upperbound) + (i* upperbound) );
+            else {
+                if (i > 0)
+                    arr[i] = arr[i - 1];
+                else {
+                    arr[i] = 0 ;
+                }
+            }
+        }
+        ArrayProblems.printpureAr(arr); ;
+        int j = ArrayProblems.removeDuplicatesArr(arr);
+        //ArrayProblems.printpureAr(arr);
+
+    }
+    public static void testRotateArr() {
+        int total = 10 ;
+        int[] arr = new int[total] ;
+
+        for (int i = 0 ; i <  total ; i++) {
+           arr[i] = i ;
+        }
+        ArrayProblems.printpureAr(arr);
+        ArrayProblems.rotateArr(arr, 8);
+    }
     public static void main(String[] args) {
 	// write your code here
 
@@ -157,7 +211,11 @@ public class Main {
          ll.printll(rev);
          ll.printll(ll.middleLL());
 */
-        testMergeLinkedList();
+        //testMergeLinkedList();
+        testRemoveDuplicates();
+        testRemoveDuplicateaArr();
+        testRotateArr() ;
+
 
     }
 }
