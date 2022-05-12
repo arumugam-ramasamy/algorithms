@@ -2,7 +2,9 @@ package com.evo.ib.linkedlist;
 
 import org.w3c.dom.Node;
 
+import java.util.HashSet;
 import java.util.List;
+import java.util.Set;
 
 public class LinkedList {
     ListNode head ;
@@ -113,4 +115,20 @@ public class LinkedList {
         if (l2 == null) dummyNode.setNext(l1);
         return headDummyNode.getNext();
     }
+
+    public int smallLL(ListNode l1, ListNode l2) {
+        while (l1 != null && l2 != null) {
+            l1 = l1.getNext() ;
+            l2 = l2.getNext() ;
+        }
+        if (l1 == null) return 1 ;
+        return 2 ;
+    }
+
+    public ListNode getIntersectionNode(ListNode headA, ListNode headB) {
+        int which = smallLL(headA, headB) ;
+        Set<Integer> smallElems = new HashSet<>() ;
+        return null ;
+    }
+
 }

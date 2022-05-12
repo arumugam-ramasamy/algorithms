@@ -102,4 +102,45 @@ public class ArrayProblems {
             right-- ;
         }
     }
+
+    public static int[] productExceptSelf (int [] nums) {
+
+        if (nums == null) return null ;
+        if (nums.length <= 1) return null ;
+        int numZeroes = 0 ;
+        int product = 1 ;
+        int  [] ans = new int[nums.length] ;
+        for (int i = 0 ; i < nums.length ; i++) {
+            if (nums[i] == 0) {
+                numZeroes++ ;
+                if (numZeroes > 1) break ;
+                continue ;
+            }
+            else {
+                product  *= nums[i] ;
+            }
+        }
+
+        if (numZeroes > 1) {
+            for (int i = 0 ; i < nums.length; i++) {
+                ans[i] = 0 ;
+            }
+            return ans ;
+        }
+
+        for (int i = 0 ; i < nums.length ; i++ ) {
+            if (numZeroes == 1) {
+                if (nums[i] == 0) {
+                   ans[i] = product ;
+                }
+                else {
+                    ans[i] = 0 ;
+                }
+            }
+            else {
+                ans[i] = product / nums[i] ;
+            }
+        }
+        return ans ;
+    }
 }

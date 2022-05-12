@@ -200,7 +200,30 @@ public class Main {
            arr[i] = i ;
         }
         ArrayProblems.printpureAr(arr);
-        ArrayProblems.rotateArr(arr, 8);
+        ArrayProblems.rotateArr(arr, 2);
+    }
+    
+    public static void testReverse () {
+        int upperbound = 100 ;
+        LinkedList ll = new LinkedList() ;
+        Random rand = new Random() ;
+        int count = rand.nextInt(10) + 1 ;
+        for (int i = 0 ; i <  count ; i++) {
+            int val = rand.nextInt(upperbound)  + (i * upperbound) ;
+            ll.insertNode(val) ;
+        }
+        ll.printll(ll.getHead());
+        ll.printll(ll.reverseLL());
+
+        LinkedList l2 = new LinkedList() ;
+        count = rand.nextInt(10) + 1 ; ;
+        for (int i = 0 ; i <  count ; i++) {
+            int val = rand.nextInt(upperbound)  + (i * upperbound) ;
+            l2.insertNode(val) ;
+        }
+        l2.printll(l2.getHead());
+        l2.printll(l2.reverseLL());
+
     }
     public static void main(String[] args) {
 	// write your code here
@@ -210,12 +233,15 @@ public class Main {
  /*        ListNode rev = ll.reverseLL() ;
          ll.printll(rev);
          ll.printll(ll.middleLL());
-*/
-        //testMergeLinkedList();
-        testRemoveDuplicates();
+            testRemoveDuplicates();
         testRemoveDuplicateaArr();
+
+  */
         testRotateArr() ;
 
+        //testMergeLinkedList();
+
+        //testReverse();
 
     }
 }
