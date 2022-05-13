@@ -170,6 +170,16 @@ public class Main {
 
     }
 
+    public static int [] generateRandomArr(int total ) {
+        int[] arr = new int[total] ;
+        Random rand = new Random() ;
+
+        for (int i = 0 ; i < total ; i++) {
+                arr[i] = (rand.nextInt(100) );
+        }
+        return arr ;
+    }
+
     public static void testRemoveDuplicateaArr () {
         int total = 2 ;
         int[] arr = new int[total] ;
@@ -225,6 +235,14 @@ public class Main {
         l2.printll(l2.reverseLL());
 
     }
+
+    public static void testQuickSort () {
+        int [] arr = generateRandomArr(100) ;
+        ArrayProblems.printpureAr(arr);
+        ArrayProblems.iterativeQsort(arr);
+        ArrayProblems.printpureAr(arr);
+
+    }
     public static void main(String[] args) {
 	// write your code here
 
@@ -237,7 +255,8 @@ public class Main {
         testRemoveDuplicateaArr();
 
   */
-        testRotateArr() ;
+       //testRotateArr() ;
+        testQuickSort();
 
         //testMergeLinkedList();
 
