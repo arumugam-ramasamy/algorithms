@@ -5,6 +5,8 @@ import com.evo.ib.arrays.ArrayProblems;
 import com.evo.ib.linkedlist.LinkedCompare;
 import com.evo.ib.linkedlist.LinkedList;
 import com.evo.ib.linkedlist.ListNode;
+import com.evo.ib.tree.BinaryNode;
+import com.evo.ib.tree.BinaryTree;
 
 import java.util.*;
 
@@ -243,24 +245,45 @@ public class Main {
         ArrayProblems.printpureAr(arr);
 
     }
+
+    public static void testSingleNumber() {
+        int count = 20 ;
+        int [] arr = generateRandomArr(count) ;
+        int [] arrnew = new int[2*count - 1] ;
+        for (int i = 0 ; i < (count-1) ; i++) {
+            arrnew[i] = arr[i] ;
+            arrnew[i+(count-1)] = arr[i] ;
+        }
+        arrnew[2 * (count-1)] = arr[count-1] ;
+        ArrayProblems.printpureAr(arr);
+        ArrayProblems.printpureAr(arrnew);
+        System.out.println (ArrayProblems.singleNumber(arrnew)) ;
+    }
+
+    public static void testBinaryTree() {
+        BinaryTree tree = new BinaryTree() ;
+        tree.insert(30);
+        tree.insert(50);
+        tree.insert(15);
+        tree.insert(20);
+        tree.insert(10);
+        tree.insert(40);
+        tree.insert(60);
+
+        tree.printTree(tree.getRoot(), null, false);
+        tree.printInOrder(tree.getRoot());
+        System.out.println();
+        tree.printInOrderLoop(tree.getRoot()) ;
+        tree.printPreOrder(tree.getRoot());
+        System.out.println();
+        tree.printPostOrder(tree.getRoot());
+        System.out.println();
+        tree.printPreOrderLoop(tree.getRoot());
+        System.out.println();
+        System.out.println(tree.height(tree.getRoot())) ;
+    }
+
     public static void main(String[] args) {
-	// write your code here
-
-       // l2.printll(addTwoNumbers(ll.getHead(), l2.getHead()));
-        //ll.printll(ll.mergeSortedLinkedList(ll.getHead(), l2.getHead())) ;
- /*        ListNode rev = ll.reverseLL() ;
-         ll.printll(rev);
-         ll.printll(ll.middleLL());
-            testRemoveDuplicates();
-        testRemoveDuplicateaArr();
-
-  */
-       //testRotateArr() ;
-        testQuickSort();
-
-        //testMergeLinkedList();
-
-        //testReverse();
-
+       testBinaryTree () ;
     }
 }
