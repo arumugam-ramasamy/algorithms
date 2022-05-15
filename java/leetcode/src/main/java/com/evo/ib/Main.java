@@ -303,5 +303,6 @@ public class Main {
        String str = "supercalifraglistic" ;
        System.out.println(str);
         System.out.println (StringProblems.reverseString(str))  ;
+        System.out.println(StringProblems.isAnagram1("anagram", "nagaram"));
     }
 }
