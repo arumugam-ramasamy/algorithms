@@ -5,6 +5,7 @@ import com.evo.ib.arrays.ArrayProblems;
 import com.evo.ib.linkedlist.LinkedCompare;
 import com.evo.ib.linkedlist.LinkedList;
 import com.evo.ib.linkedlist.ListNode;
+import com.evo.ib.strings.StringProblems;
 import com.evo.ib.tree.BinaryNode;
 import com.evo.ib.tree.BinaryTree;
 
@@ -172,6 +173,16 @@ public class Main {
 
     }
 
+    public static int [] generateRandomSortedArr(int total ) {
+        int[] arr = new int[total] ;
+        Random rand = new Random() ;
+
+        for (int i = 0 ; i < total ; i++) {
+            arr[i] = (rand.nextInt(10)  + i*10 );
+        }
+        return arr ;
+    }
+
     public static int [] generateRandomArr(int total ) {
         int[] arr = new int[total] ;
         Random rand = new Random() ;
@@ -261,14 +272,18 @@ public class Main {
     }
 
     public static void testBinaryTree() {
+        int total = 15 ;
+        BinaryNode node = BinaryTree.sortedArrayToBST  (generateRandomSortedArr(total), 0, total -1) ;
         BinaryTree tree = new BinaryTree() ;
-        tree.insert(30);
+        tree.setRoot(node);
+
+       /* tree.insert(30);
         tree.insert(50);
         tree.insert(15);
         tree.insert(20);
         tree.insert(10);
         tree.insert(40);
-        tree.insert(60);
+        tree.insert(60);*/
 
         tree.printTree(tree.getRoot(), null, false);
         tree.printInOrder(tree.getRoot());
@@ -285,5 +300,8 @@ public class Main {
 
     public static void main(String[] args) {
        testBinaryTree () ;
+       String str = "supercalifraglistic" ;
+       System.out.println(str);
+        System.out.println (StringProblems.reverseString(str))  ;
     }
 }
