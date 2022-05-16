@@ -85,6 +85,37 @@ public class StringProblems {
         if (s.length() != t.length()) return false ;
 
         if (s.length() > 256) return isAnagram3(s, t) ;
-        return isAnagram(s,t) ;
+        return isAnagram2(s,t) ;
+    }
+
+    public boolean isPalindrome (String s) {
+       if (s.isEmpty()) return true ;
+       s = s.toLowerCase(Locale.ROOT) ;
+        StringBuilder t = new StringBuilder() ;
+        for (int i = 0 ; i < s.length() ; i++) {
+            if (Character.isLetterOrDigit(s.charAt(i))){
+                t.append(s.charAt(i)) ;
+            }
+        }
+        String temp = t.toString() ;
+        for (int i = 0 ; i < temp.length()/2 ; i++) {
+            if (temp.charAt(i) != temp.charAt(temp.length()-1-i)) return false ;
+        }
+        return true ;
+    }
+
+    public static int firstUniqueChar(String s) {
+        if (s.isEmpty())  return -1 ;
+        int [] chrCount = new int[256] ;
+        for (int i = 0 ; i < s.length() ; i++) {
+            chrCount[(int)s.charAt(i)]++ ;
+        }
+        for (int i = 0 ; i < s.length() ; i++) {
+            if (chrCount[(int)s.charAt(i)] == 1) {
+                return i ;
+            }
+
+        }
+        return -1 ;
     }
 }

@@ -304,5 +304,6 @@ public class Main {
        System.out.println(str);
         System.out.println (StringProblems.reverseString(str))  ;
         System.out.println(StringProblems.isAnagram1("anagram", "nagaram"));
+        System.out.println(StringProblems.firstUniqueChar("loveleetcode")) ;
     }
 }
