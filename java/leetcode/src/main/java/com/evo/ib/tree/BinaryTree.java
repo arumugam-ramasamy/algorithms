@@ -1,19 +1,24 @@
 package com.evo.ib.tree;
 
-import java.util.LinkedList;
-import java.util.Queue;
-import java.util.Stack;
+import com.sun.source.tree.Tree;
+
+import java.util.*;
 
 public class BinaryTree {
 
 
     static final int COUNT = 10;
+    static Set<TreeNode> set = new HashSet<>();
+    static Stack<TreeNode> stack = new Stack<>();
+    static HashMap<Integer,Integer> mp = new HashMap<>();
+    static int preIndex = 0;
 
-    BinaryNode root;
+    TreeNode root;
 
     public BinaryTree() {
         root = null;
     }
+
 
     public void insert(int key) {
         root = insertRec(root, key);
@@ -21,19 +26,19 @@ public class BinaryTree {
 
     /* A recursive function to
        insert a new key in BST */
-    BinaryNode insertRec(BinaryNode root, int key) {
+    TreeNode insertRec(TreeNode root, int key) {
 
         /* If the tree is empty,
            return a new node */
         if (root == null) {
-            root = new BinaryNode(key);
+            root = new TreeNode(key);
             return root;
         }
 
         /* Otherwise, recur down the tree */
-        if (key < root.key)
+        if (key < root.val)
             root.left = insertRec(root.left, key);
-        else if (key > root.key)
+        else if (key > root.val)
             root.right = insertRec(root.right, key);
 
         /* return the (unchanged) node pointer */
@@ -41,21 +46,22 @@ public class BinaryTree {
     }
 
     // print left child, parent, right child  (recursion)
-    public void printInOrder(BinaryNode root) {
+    public void printInOrder(TreeNode root) {
         if (root != null) printInOrder(root.getLeft());
         else return;
-        System.out.print(root.getKey() + " ");
+        System.out.print(root.getVal() + " ");
         if (root != null) printInOrder(root.getRight());
         else return;
 
     }
 
-    // print left child, parent, right child (loop)
-    public void printInOrderLoop(BinaryNode root) {
-        if (root == null) return;
-        Stack<BinaryNode> st = new Stack<>();
 
-        BinaryNode curr = root;
+    // print left child, parent, right child (loop)
+    public void printInOrderLoop(TreeNode root) {
+        if (root == null) return;
+        Stack<TreeNode> st = new Stack<>();
+
+        TreeNode curr = root;
 
         while (curr != null || st.size() > 0) {
 
@@ -64,33 +70,54 @@ public class BinaryTree {
                 curr = curr.getLeft();
             }
             curr = st.pop();
-            System.out.print(curr.getKey() + " ");
+            System.out.print(curr.getVal() + " ");
             curr = curr.getRight();
         }
         System.out.println();
     }
 
-    public void printPostOrder(BinaryNode root) {
+    public List<Integer> inOrderLoop(TreeNode root) {
+        if (root == null) return null ;
+        List<Integer> list = new ArrayList<>() ;
+        Stack<TreeNode> st = new Stack<>();
+
+        TreeNode curr = root;
+
+        while (curr != null || st.size() > 0) {
+
+            while (curr != null) {
+                st.push(curr);
+                curr = curr.getLeft();
+            }
+            curr = st.pop();
+            list.add(curr.getVal()) ;
+            curr = curr.getRight();
+        }
+        return list ;
+    }
+
+
+    public void printPostOrder(TreeNode root) {
         if (root != null) {
             printPostOrder(root.getLeft());
             printPostOrder(root.getRight());
         } else return;
-        System.out.print(root.getKey() + " ");
+        System.out.print(root.getVal() + " ");
     }
 
     // parent first, left then right child (recursion)
-    public void printPreOrder(BinaryNode root) {
+    public void printPreOrder(TreeNode root) {
         if (root != null) {
-            System.out.print(root.getKey() + " ");
+            System.out.print(root.getVal() + " ");
         } else return;
         printPreOrder(root.getLeft());
         printPreOrder(root.getRight());
     }
 
     // parent first, left then right child (loop)
-    public void printPreOrderLoop(BinaryNode root) {
+    public void printPreOrderLoop(TreeNode root) {
 
-        Stack<BinaryNode> st = new Stack<>();
+        Stack<TreeNode> st = new Stack<>();
 
         if (root == null) {
             return;
@@ -99,7 +126,7 @@ public class BinaryTree {
 
         // Start from root node (set curr
         // node to root node)
-        BinaryNode curr = root;
+        TreeNode curr = root;
 
         // Run till stack is not empty or
         // current is not NULL
@@ -109,7 +136,7 @@ public class BinaryTree {
             // and keep pushing right into the
             // stack.
             while (curr != null) {
-                System.out.print(curr.getKey() + " ");
+                System.out.print(curr.getVal() + " ");
 
                 if (curr.right != null)
                     st.push(curr.getRight());
@@ -135,7 +162,7 @@ public class BinaryTree {
         System.out.print(p.str);
     }
 
-    public void printTree(BinaryNode root, Trunk prev, boolean isLeft) {
+    public void printTree(TreeNode root, Trunk prev, boolean isLeft) {
         if (root == null) {
             return;
         }
@@ -156,7 +183,7 @@ public class BinaryTree {
         }
 
         showTrunks(trunk);
-        System.out.println(" " + root.getKey());
+        System.out.println(" " + root.getVal());
 
         if (prev != null) {
             prev.str = prev_str;
@@ -167,17 +194,17 @@ public class BinaryTree {
     }
 
 
-    public BinaryNode getRoot() {
+    public TreeNode getRoot() {
         return root;
     }
 
-    public void setRoot(BinaryNode root) {
+    public void setRoot(TreeNode root) {
         this.root = root;
     }
 
-    public int height(BinaryNode root) {
+    public int height(TreeNode root) {
         if (root == null) return 0;
-        Queue<BinaryNode> q = new LinkedList<>();
+        Queue<TreeNode> q = new LinkedList<>();
         int height = 0;
         q.add(root);
         int nodecount = q.size();
@@ -193,7 +220,7 @@ public class BinaryTree {
             // Dequeue all nodes of current level and Enqueue all
             // nodes of next level
             while (nodeCount > 0) {
-                BinaryNode newnode = q.peek();
+                TreeNode newnode = q.peek();
                 q.remove();
                 if (newnode.left != null)
                     q.add(newnode.left);
@@ -205,9 +232,70 @@ public class BinaryTree {
 
     }
 
+    public TreeNode buildTree (int [] preorder, int [] inorder) {
+        TreeNode root = null;
+        for (int pre = 0, in = 0; pre < preorder.length;) {
+
+            TreeNode node = null;
+            do {
+                node = new TreeNode(preorder[pre]);
+                if (root == null) {
+                    root = node;
+                }
+                if (!stack.isEmpty()) {
+                    if (set.contains(stack.peek())) {
+                        set.remove(stack.peek());
+                        stack.pop().right = node;
+                    }
+                    else {
+                        stack.peek().left = node;
+                    }
+                }
+                stack.push(node);
+            } while (preorder[pre++] != inorder[in] && pre < preorder.length);
+
+            node = null;
+            while (!stack.isEmpty() && in < inorder.length &&
+                    stack.peek().val == inorder[in]) {
+                node = stack.pop();
+                in++;
+            }
+
+            if (node != null) {
+                set.add(node);
+                stack.push(node);
+            }
+        }
+
+        return root;
+    }
+
+    public TreeNode buildTreeRec(int[] preorder, int[] inorder, int start, int end) {
+        if (start > end) return null ;
+
+        int cur = preorder[preIndex++] ;
+        TreeNode node = new TreeNode(cur) ;
+        if (start == end) return node ;
+
+        int mindex = mp.get(cur) ;
+
+        node.left = buildTreeRec(preorder, inorder, start, mindex-1) ;
+        node.right = buildTreeRec(preorder, inorder, mindex+1, end) ;
+        return node ;
+
+    }
+
+    public TreeNode buildTreeInPre (int [] preorder, int [] inorder) {
+        for(int i = 0; i < inorder.length ;  i++)
+        {
+            mp.put(inorder[i], i);
+        }
+        return buildTreeRec(preorder, inorder, 0, inorder.length-1) ;
+    }
+
     /* A function that constructs Balanced Binary Search Tree
      from a sorted array */
-    public static BinaryNode sortedArrayToBST(int arr[], int start, int end) {
+    public static TreeNode sortedArrayToBST(int arr[], int start, int end) {
 
         /* Base Case */
         if (start > end) {
@@ -216,7 +304,7 @@ public class BinaryTree {
 
         /* Get the middle element and make it root */
         int mid = (start + end) / 2;
-        BinaryNode node = new BinaryNode(arr[mid]);
+        TreeNode node = new TreeNode(arr[mid]);
 
         /* Recursively construct the left subtree and make it
          left child of root */

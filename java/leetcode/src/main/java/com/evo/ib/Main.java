@@ -5,8 +5,8 @@ import com.evo.ib.arrays.ArrayProblems;
 import com.evo.ib.linkedlist.LinkedCompare;
 import com.evo.ib.linkedlist.LinkedList;
 import com.evo.ib.linkedlist.ListNode;
-import com.evo.ib.strings.StringProblems;
-import com.evo.ib.tree.BinaryNode;
+import com.evo.ib.strings.StringHardProblems;
+import com.evo.ib.tree.TreeNode;
 import com.evo.ib.tree.BinaryTree;
 
 import java.util.*;
@@ -273,7 +273,7 @@ public class Main {
 
     public static void testBinaryTree() {
         int total = 15 ;
-        BinaryNode node = BinaryTree.sortedArrayToBST  (generateRandomSortedArr(total), 0, total -1) ;
+        TreeNode node = BinaryTree.sortedArrayToBST  (generateRandomSortedArr(total), 0, total -1) ;
         BinaryTree tree = new BinaryTree() ;
         tree.setRoot(node);
 
@@ -301,9 +301,12 @@ public class Main {
     public static void main(String[] args) {
        testBinaryTree () ;
        String str = "supercalifraglistic" ;
-       System.out.println(str);
+      /* System.out.println(str);
         System.out.println (StringProblems.reverseString(str))  ;
         System.out.println(StringProblems.isAnagram1("anagram", "nagaram"));
-        System.out.println(StringProblems.firstUniqueChar("loveleetcode")) ;
+        System.out.println(StringProblems.firstUniqueChar("loveleetcode")) ;*/
+        System.out.println(StringHardProblems.longestSubUniqueChars("geeksforgeeks"));
+        System.out.println(StringHardProblems.longestBestUniwueChar("geeksforgeeks"));
+
     }
 }
