@@ -43,7 +43,7 @@ public class BinaryTreeHard {
         return isValidNullBST(root.left, l, root) && isValidNullBST(root.right, root, r) ;
     }
 
-    public TreeNode lowestCommonAncestor(TreeNode root, TreeNode p, TreeNode q) {
+    public TreeNode lowestCommonAncestorBST(TreeNode root, TreeNode p, TreeNode q) {
         if (p == null) return q  ;
         if (q == null) return p ;
         if (root == null) return null ;
@@ -60,6 +60,41 @@ public class BinaryTreeHard {
             if (root.val > p.val  && root.val >  q.val) root = root.left ;
         }
         return save ;
+    }
+
+    public TreeNode lowestCommonAncestor(TreeNode root, TreeNode p, TreeNode q) {
+        if (p == null) return q  ;
+        if (q == null) return p ;
+        if (root == null) return null ;
+        List <TreeNode> list1 = new ArrayList<>() ;
+        List <TreeNode> list2 = new ArrayList<>() ;
+        boolean ans1 = findPath(root, p, list1)  ;
+        boolean ans2 = findPath(root, q, list2) ;
+        if (!(ans1 || ans2)) {
+            System.out.println ("cannot find given nodes") ;
+            return null ;
+        }
+        int i ;
+        for (i = 0 ; i < list1.size() && i < list2.size() ; i++) {
+            if (!(list1.get(i).val == list2.get(i).val)) break ;
+        }
+
+        return list1.get(i-1) ;
+    }
+
+    public boolean findPath(TreeNode root, TreeNode p, List<TreeNode> list) {
+
+        if (root == null) return false ;
+        list.add(root) ;
+        if (root.val == p.val) return true ;
+        if (root.left != null && findPath(root.left, p, list)){
+            return true;
+        }
+        if (root.right != null && findPath(root.right, p, list)) {
+            return true;
+        }
+        list.remove(list.size()-1) ;
+        return false ;
     }
 
     public TreeNode inOrderSccc (TreeNode root, TreeNode p) {
