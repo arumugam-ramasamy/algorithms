@@ -208,4 +208,70 @@ public class BinaryTreeHard {
         }
         return list ;
     }
+
+    public int maxPathSum(TreeNode root) {
+        int res = Integer.MIN_VALUE ;
+
+        return maxPathSumAll(root, res) ;
+     }
+
+     public int maxPathSumAll(TreeNode root, int res) {
+
+        if (root == null) return 0 ;
+
+        int left = maxPathSumAll(root.left, res) ;
+        int right = maxPathSumAll(root.right, res) ;
+
+        int max_single = Math.max(Math.max(left, right) + root.val, root.val) ;
+
+        int max = Math.max(max_single, left+right+ root.val) ;
+
+        return (Math.max(res, max)) ;
+
+     }
+
+     public TreeNode  depthFirstSearch(TreeNode root,  TreeNode node) {
+
+        if (root == null) return null ;
+        Stack<TreeNode>  stack = new Stack<>() ;
+        stack.push(root) ;
+
+        while (stack.size() > 0) {
+            TreeNode cur = stack.pop() ;
+            System.out.print(cur.val + " ");
+            if (node.val == cur.val )  return cur ;
+            if (cur.right != null) stack.push(cur.right) ;
+            if (cur.left != null) stack.push(cur.left) ;
+        }
+        return null ;
+     }
+
+     public TreeNode breadthFirstSearch (TreeNode root, TreeNode node) {
+        if (root == null) return null ;
+        Queue<TreeNode> queue = new LinkedList<>() ;
+        queue.add(root) ;
+        int currentCount = queue.size() ;
+        int nextLevelCount = 0 ;
+
+        while (queue.size() > 0) {
+            while (currentCount > 0) {
+                TreeNode cur = queue.remove() ;
+                System.out.print (cur.val + " ") ;
+                --currentCount ;
+                if (cur.val == node.val) return cur ;
+                if (cur.left != null) {
+                    queue.add(cur.left) ;
+                    ++nextLevelCount ;
+                }
+                if (cur.right != null) {
+                    queue.add(cur.right) ;
+                    ++nextLevelCount ;
+                }
+            }
+            currentCount = nextLevelCount ;
+            nextLevelCount = 0 ;
+
+        }
+        return null ;
+     }
 }

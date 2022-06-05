@@ -5,7 +5,9 @@ import com.evo.ib.arrays.ArrayProblems;
 import com.evo.ib.linkedlist.LinkedCompare;
 import com.evo.ib.linkedlist.LinkedList;
 import com.evo.ib.linkedlist.ListNode;
+import com.evo.ib.math.Fibonacci;
 import com.evo.ib.strings.StringHardProblems;
+import com.evo.ib.tree.BinaryTreeHard;
 import com.evo.ib.tree.TreeNode;
 import com.evo.ib.tree.BinaryTree;
 
@@ -273,7 +275,11 @@ public class Main {
 
     public static void testBinaryTree() {
         int total = 15 ;
-        TreeNode node = BinaryTree.sortedArrayToBST  (generateRandomSortedArr(total), 0, total -1) ;
+        int [] arr = generateRandomSortedArr(total) ;
+        Random rand = new Random() ;
+        TreeNode dps = new TreeNode(arr[rand.nextInt(total)])  ;
+        TreeNode bfs = new TreeNode(arr[rand.nextInt(total)]) ;
+        TreeNode node = BinaryTree.sortedArrayToBST  (arr, 0, total -1) ;
         BinaryTree tree = new BinaryTree() ;
         tree.setRoot(node);
 
@@ -286,7 +292,17 @@ public class Main {
         tree.insert(60);*/
 
         tree.printTree(tree.getRoot(), null, false);
-        tree.printInOrder(tree.getRoot());
+        BinaryTreeHard bth = new BinaryTreeHard() ;
+        System.out.println() ;
+        System.out.println (bfs.val + " to be found") ;
+        TreeNode find = bth.breadthFirstSearch(tree.getRoot(), bfs) ;
+        if (find != null)
+            System.out.println(find.val + " found") ;
+        System.out.println(dps.val + " to be found");
+        find = bth.depthFirstSearch(tree.getRoot(), dps) ;
+        if (find != null)
+        System.out.println (find.val + " found it " ) ;
+        /*tree.printInOrder(tree.getRoot());
         System.out.println();
         tree.printInOrderLoop(tree.getRoot()) ;
         tree.printPreOrder(tree.getRoot());
@@ -295,18 +311,27 @@ public class Main {
         System.out.println();
         tree.printPreOrderLoop(tree.getRoot());
         System.out.println();
-        System.out.println(tree.height(tree.getRoot())) ;
+        System.out.println(tree.height(tree.getRoot())) ;*/
+
+    }
+
+
+    public static void testFibonacci () {
+        Fibonacci fib = new Fibonacci() ;
+        fib.setFibNum(20);
+        System.out.println(fib.calcFib() + " , " + fib.calcFibMem() + " , " + fib.calcFibByFormula());
     }
 
     public static void main(String[] args) {
-       testBinaryTree () ;
-       String str = "supercalifraglistic" ;
+       //testBinaryTree () ;
+        testFibonacci();
+       /*String str = "supercalifraglistic" ;
       /* System.out.println(str);
         System.out.println (StringProblems.reverseString(str))  ;
         System.out.println(StringProblems.isAnagram1("anagram", "nagaram"));
-        System.out.println(StringProblems.firstUniqueChar("loveleetcode")) ;*/
+        System.out.println(StringProblems.firstUniqueChar("loveleetcode")) ;
         System.out.println(StringHardProblems.longestSubUniqueChars("geeksforgeeks"));
-        System.out.println(StringHardProblems.longestBestUniwueChar("geeksforgeeks"));
+        System.out.println(StringHardProblems.longestBestUniwueChar("geeksforgeeks"));*/
 
     }
 }
