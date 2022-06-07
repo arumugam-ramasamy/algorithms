@@ -6,6 +6,7 @@ import com.evo.ib.linkedlist.LinkedCompare;
 import com.evo.ib.linkedlist.LinkedList;
 import com.evo.ib.linkedlist.ListNode;
 import com.evo.ib.math.Fibonacci;
+import com.evo.ib.sort.MergeSort;
 import com.evo.ib.strings.StringHardProblems;
 import com.evo.ib.tree.BinaryTreeHard;
 import com.evo.ib.tree.TreeNode;
@@ -322,9 +323,17 @@ public class Main {
         System.out.println(fib.calcFib() + " , " + fib.calcFibMem() + " , " + fib.calcFibByFormula());
     }
 
+    public static void testMergeSort () {
+        MergeSort mergeSort = new MergeSort() ;
+        mergeSort.printArr();
+        mergeSort.mergeSort(mergeSort.getArr(), mergeSort.getArr().length);
+        mergeSort.printArr();
+    }
+
     public static void main(String[] args) {
        //testBinaryTree () ;
-        testFibonacci();
+      //  testFibonacci();
+        testMergeSort();
        /*String str = "supercalifraglistic" ;
       /* System.out.println(str);
         System.out.println (StringProblems.reverseString(str))  ;
