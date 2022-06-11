@@ -2,6 +2,7 @@ package com.evo.ib;
 
 
 import com.evo.ib.arrays.ArrayProblems;
+import com.evo.ib.graph.EasyProblems;
 import com.evo.ib.linkedlist.LinkedCompare;
 import com.evo.ib.linkedlist.LinkedList;
 import com.evo.ib.linkedlist.ListNode;
@@ -333,7 +334,8 @@ public class Main {
     public static void main(String[] args) {
        //testBinaryTree () ;
       //  testFibonacci();
-        testMergeSort();
+      //  testMergeSort();
+        EasyProblems.testJudge();
        /*String str = "supercalifraglistic" ;
       /* System.out.println(str);
         System.out.println (StringProblems.reverseString(str))  ;

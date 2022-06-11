@@ -2,6 +2,7 @@ package com.evo.ib.strings;
 
 import java.util.Arrays;
 import java.util.List;
+import java.util.Locale;
 
 public class StringHardProblems {
 
@@ -65,6 +66,26 @@ public class StringHardProblems {
             lastIndex[str.charAt(j)] = j ;
         }
         return res ;
+    }
+
+    public static String longestSubstringKDistinctChars (String str, int k) {
+        if (k == 0) return null ;
+        if (str == null || str.length() == 0) return null ;
+        if (str.length()  < k)  return null ;
+        str = str.toLowerCase(Locale.ROOT)  ;
+        int count = 0 ;
+        int max_start = 0 ;
+        int max_size = 1 ;
+        int countk = 1 ;
+        int [] counts = new int[26] ;
+        counts[str.charAt(0) - 'a']++ ;
+        for (int i = 1 ; i < str.length() ; i++) {
+            if (counts[str.charAt(i) - 'a'] == 0){
+                countk++ ;
+            }
+
+        }
+        return "" ;
     }
 
 }
