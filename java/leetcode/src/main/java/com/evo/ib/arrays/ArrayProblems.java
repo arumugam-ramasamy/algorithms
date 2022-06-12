@@ -186,6 +186,19 @@ public class ArrayProblems {
         return idx;
     }
 
+    public int missingNumber(int[] nums) {
+
+        int len = nums.length ;
+        int sum = len * (len+1) / 2 ;
+        int actualsum = 0 ;
+        for (int i = 0 ; i < len ; i++) {
+            actualsum += nums[i] ;
+        }
+
+        return (sum - actualsum) ;
+
+    }
+
     /**
      * Utility method to swap two numbers in given array * * @param arr - array on which swap will happen * @param i * @param j
      */
