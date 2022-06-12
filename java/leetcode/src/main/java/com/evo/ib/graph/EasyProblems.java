@@ -97,6 +97,17 @@ public class EasyProblems {
         return false ;
     }
 
+    public static int getStarNode(int N, int[][] edges) {
+        if (N <= 1) return -1 ;
+        if (edges.length == 0) return -1 ;
+        Map<Integer, Set<Integer>> adjlist = new HashMap<>() ;
+        createAdjList(edges, adjlist);
+        for (Map.Entry<Integer, Set<Integer>> entry : adjlist.entrySet()) {
+            if (entry.getValue().size() == (N-1)) return entry.getKey() ;
+        }
+        return -1 ;
+    }
+
     public static void testJudge () {
         int [][] testdata = new int[][]{{1,2}} ;
         System.out.println (findJudge(2, testdata  )) ;
@@ -112,5 +123,12 @@ public class EasyProblems {
         int [][]testdata = new int[][] {{0, 1}, {1, 2}, {2, 3} } ;
         System.out.println (hasPath(5, testdata, 0, 4)) ;
         System.out.println (hasPathStack(4, testdata, 0, 3)) ;
+    }
+
+    public static void testStar() {
+        int [][]testdata = new int[][] {{0, 1}, {1, 2}, {2, 3}, {1, 3} } ;
+        System.out.println (getStarNode(4, testdata)) ;
+        testdata = new int[][] {{0, 1}, {1, 2}, {2, 3}, {1, 3} , {4, 2}} ;
+        System.out.println (getStarNode(5, testdata)) ;
     }
 }

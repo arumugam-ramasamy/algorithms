@@ -335,7 +335,7 @@ public class Main {
        //testBinaryTree () ;
       //  testFibonacci();
       //  testMergeSort();
-        EasyProblems.testHasPath();
+        EasyProblems.testStar();
        /*String str = "supercalifraglistic" ;
       /* System.out.println(str);
         System.out.println (StringProblems.reverseString(str))  ;
