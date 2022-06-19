@@ -1,5 +1,7 @@
 package com.evo.ib.tree;
 
+import com.sun.source.tree.Tree;
+
 import java.util.*;
 
 public class BinaryTree {
@@ -314,5 +316,33 @@ public class BinaryTree {
 
         return node;
     }
+
+    public static TreeNode arrayToBST(Integer arr[], int start, int end) {
+
+        TreeNode node = new TreeNode(arr[0]);
+        Queue<TreeNode> tree = new LinkedList<>() ;
+        tree.add(node) ;
+
+        int ind = 1 ;
+        while (tree.size() > 0) {
+            TreeNode cur = tree.remove() ;
+            Integer val = arr[ind] ;
+            if (val != null) {
+                TreeNode ins = new TreeNode(arr[ind]) ;
+                cur.left = ins  ;
+                tree.add(ins) ;
+                ind++ ;
+            }
+            val = arr[ind] ;
+            if (val != null) {
+                TreeNode ins = new TreeNode(arr[ind]) ;
+                cur.right = ins  ;
+                tree.add(ins) ;
+                ind++ ;
+            }
+        }
+        return node;
+    }
+
 
 }
