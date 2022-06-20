@@ -9,6 +9,7 @@ import com.evo.ib.linkedlist.ListNode;
 import com.evo.ib.math.Fibonacci;
 import com.evo.ib.sort.MergeSort;
 import com.evo.ib.strings.StringHardProblems;
+import com.evo.ib.strings.StringProblems;
 import com.evo.ib.tree.BinaryTreeHard;
 import com.evo.ib.tree.TreeNode;
 import com.evo.ib.tree.BinaryTree;
@@ -335,7 +336,9 @@ public class Main {
        //testBinaryTree () ;
       //  testFibonacci();
       //  testMergeSort();
-        EasyProblems.testStar();
+       // EasyProblems.testStar();
+       //// StringHardProblems.testKMP();
+        StringProblems.rotation("abcd", "cdab") ;
        /*String str = "supercalifraglistic" ;
       /* System.out.println(str);
         System.out.println (StringProblems.reverseString(str))  ;

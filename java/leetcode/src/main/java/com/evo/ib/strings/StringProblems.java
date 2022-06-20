@@ -2,10 +2,7 @@ package com.evo.ib.strings;
 
 import com.evo.ib.arrays.ArrayProblems;
 
-import java.util.Arrays;
-import java.util.HashMap;
-import java.util.Locale;
-import java.util.Map;
+import java.util.*;
 
 public class StringProblems {
 
@@ -117,5 +114,15 @@ public class StringProblems {
 
         }
         return -1 ;
+    }
+
+    public static boolean rotation (String str, String str2) {
+        if (str2 == null) return false ;
+        if (str == null) return false ;
+        if (str.length() != str2.length()) return false ;
+        str2 = str2+str2 ;
+        Set<Integer> match = StringHardProblems.KMP(str2, str) ;
+        if (match.size() > 0 ) return true ;
+        return false ;
     }
 }

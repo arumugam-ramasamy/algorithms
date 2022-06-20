@@ -147,6 +147,10 @@ public class StringHardProblems {
 
     public static void testKMP () {
 
+        String s1 = "aa" ;
+        String s2 = "aaaaabcdaaaaaaa";
+        System.out.println(KMP(s2, s1) ) ;
+
     }
 
     public static double convertStrToInt(String str) {
