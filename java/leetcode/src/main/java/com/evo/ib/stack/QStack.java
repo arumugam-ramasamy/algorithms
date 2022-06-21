@@ -53,4 +53,3 @@ public class QStack <T> {
         }
     }
 }
-(base) pranav@pranav-Precision-5820-Tower:~/evolutionary/algorithms$ cat  smic/src/com/smic/practice/stack/Stack.java
