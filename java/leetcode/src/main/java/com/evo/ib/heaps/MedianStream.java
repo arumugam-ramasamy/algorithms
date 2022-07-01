@@ -25,7 +25,7 @@ public class MedianStream {
                 maxHeap.offer(minHeap.poll());
             }
         }
-        System.out.println(minHeap.size() + "," + maxHeap.size());
+       // System.out.println(minHeap.size() + "," + maxHeap.size());
     }
 
     public int getMedian() {
@@ -44,10 +44,9 @@ public class MedianStream {
         Random rand = new Random();
         MedianStream md = new MedianStream();
         for (int i = 0; i < 100; i++) {
-            md.addNum(rand.nextInt(1000) - 500);
-            if (rand.nextInt(100) < 50) {
-                System.out.println(md.getMedian());
-            }
+            md.addNum(rand.nextInt(100) - 50);
+            System.out.println(md.getMedian());
+
         }
     }
 }
