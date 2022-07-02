@@ -1,0 +1,26 @@
+1. Find the missing number in the array
+2. Given an array of integers and a value, determine if there are any two integers in the array whose
+   sum is equal to the given value.
+3. Given two sorted linked lists, merge them so that the resulting linked list is also sorted.
+4. You are given a linked list where the node has two pointers. The first is the regular ‘next’ pointer.
+   The second pointer is called ‘arbitrary_pointer’ and it can point to any node in the linked list.
+    Your job is to write code to make a deep copy of the given linked list. Here, deep copy means that
+    any operations on the original list (inserting, modifying and removing) should not affect the copied list.
+5. Given the root of a binary tree, display the node values at each level. Node values for all levels should be
+   displayed on separate lines.
+6. Given a Binary Tree, figure out whether it’s a Binary Search Tree. In a binary search tree, each node’s key
+   value is smaller than the key value of all nodes in the right subtree, and are greater than the key values
+   of all nodes in the left subtree i.e. L < N < R.
+7. Given a dictionary of words and an input string tell whether the input string can be completely segmented
+   into dictionary words.
+8. Reverse words in a sentence
+9. Given a string, find the length of the longest substring which has no repeating characters.
+10.Given coin denominations and total amount, find out the number of ways to make the change.
+11.Given a set of ‘N’ elements, find the Kth permutation.
+12.You are given a set of integers and you have to find all the possible subsets of this set of integers.
+13.Print all braces combinations for a given value 'N' so that they are balanced.
+14.Given the root node of a directed graph, clone this graph by creating its deep copy so that the cloned
+   graph has the same vertices and edges as the original graph.
+15.Given an array of points in the a 2D plane, find ‘K’ closest points to the origin.
+16.Given an unsorted array of numbers, find the top ‘K’ frequently occurring numbers in it.
+

@@ -1,0 +1,26 @@
+1.  Given an array of integers and a value, determine if there are any two integers in the array whose
+    sum is equal to the given value.
+2.  Move all zeros to the left of an array while maintaining its order.   ---- Done
+3.  You are given the head of a linked list and a key. You have to delete the node that contains this given key.
+4.  You are given a linked list where the node has two pointers. The first is the regular ‘next’ pointer.
+    The second pointer is called ‘arbitrary_pointer’ and it can point to any node in the linked list.
+    Your job is to write code to make a deep copy of the given linked list. Here, deep copy means that
+    any operations on the original list (inserting, modifying and removing) should not affect the copied list.
+5.  Given the root node of a binary tree, swap the 'left' and 'right' children for each node.
+6.  Given the roots of two binary trees, determine if these trees are identical or not.
+7.  Given a dictionary of words and an input string tell whether the input string can be completely segmented
+    into dictionary words.
+8.  Given a string find all non-single letter substrings that are palindromes.
+9.  Given an array, find the contiguous subarray with the largest sum.
+10. Given an input string, determine if it makes a valid number or not. For simplicity, assume that
+    white spaces are not present in the input.
+11. Print all braces combinations for a given value 'N' so that they are balanced.
+12. Find the minimum spanning tree of a connected, undirected graph with weighted edges.
+13. Least Recently Used (LRU) is a common caching strategy. It defines the policy to evict elements from
+    the cache to make room for new elements when the cache is full, meaning it discards the least recently
+    used items first.
+14. Given a sorted array of integers, return the low and high index of the given key. Return -1 if not found.
+    The array length can be in the millions with many duplicates.
+15. You are given an array (list) of interval pairs as input where each interval has a start and end timestamp.
+    The input array is sorted by starting timestamps. You are required to merge overlapping intervals and return
+    output array (list).

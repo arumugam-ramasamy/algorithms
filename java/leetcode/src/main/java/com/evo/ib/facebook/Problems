@@ -1,0 +1,28 @@
+1.  Given an integer array, move all elements that are equal to 0 to the left while maintaining the
+    order of other elements in the array.
+2.  Given a list of intervals, merge all the overlapping intervals to produce a list that has only
+    mutually exclusive intervals.
+3.  Given the head pointers of two linked lists where each linked list represents an integer number
+    (each node is a digit), add them and return the resulting linked list.
+4.  Given two sorted linked lists, merge them so that the resulting linked list is also sorted.
+5.  Convert a binary tree to a doubly linked list so that the order of the doubly linked list is
+    the same as an in-order traversal of the binary tree. After conversion, the left pointer of the
+    node should be pointing to the previous node in the doubly linked list, and the right pointer should
+    be pointing to the next node in the doubly linked list.
+6.  Given a binary tree and a number ‘S’, find all paths from root-to-leaf such that the sum of all the
+    node values of each path equals ‘S’.
+7.  Reverse the order of words in a given sentence (an array of characters).
+8.  Given a dictionary of words and an input string tell whether the input string can be completely segmented
+    into dictionary words.
+9.  Given a list of daily stock prices (integers for simplicity), return the buy and sell prices for making the
+    maximum profit. We need to maximize the single buy/sell profit. If we can't make any profit, we'll try to
+    minimize the loss.
+10. Given a double, 'x', and an integer, 'n', write a function to calculate 'x' raised to the power 'n'.
+11. You are given a set of integers and you have to find all the possible subsets of this set of integers.
+12. There is a dictionary containing words from an alien language for which we don’t know the ordering of the
+    characters. Write a method to find the correct order of characters in the alien language.
+13. Serialize a binary tree to a file and then deserialize it back to a tree so that the original and the
+    deserialized trees are identical.
+14. Given a sorted array of integers, return the low and high index of the given key. Return -1 if not found.
+    The array length can be in the millions with many duplicates.
+15. Search for a given number in a sorted array that has been rotated by some arbitrary number.
