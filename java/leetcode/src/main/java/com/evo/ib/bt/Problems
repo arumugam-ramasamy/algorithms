@@ -4,11 +4,6 @@ Postorder Tree Traversal
 Check if two binary trees are identical or not
 Print bottom view of a binary tree
 Print top view of a binary tree
-
-Find the Lowest Common Ancestor (LCA) of two nodes in a binary tree
-Find ancestors of a given node in a binary tree
-Find distance between given pairs of nodes in a binary tree
-
 Construct a binary tree from inorder and preorder traversal
 Construct a binary tree from inorder and postorder traversals
 Construct a binary tree from inorder and level order sequence
@@ -17,6 +12,17 @@ Construct a full binary tree from a preorder and postorder sequence
 Find postorder traversal of a binary tree from its inorder and preorder sequence
 Set next pointer to the inorder successor of all nodes in a binary tree
 Find preorder traversal of a binary tree from its inorder and postorder sequence
+
+Find the Lowest Common Ancestor (LCA) of two nodes in a binary tree
+Find ancestors of a given node in a binary tree
+Find distance between given pairs of nodes in a binary tree
+
+Print right view of a binary tree
+Find the minimum depth of a binary tree
+Depth-First Search (DFS) vs Breadth-First Search (BFS)
+Print nodes of a binary tree in vertical order
+Perform vertical traversal of a binary tree
+
 
 Determine whether a binary tree is a subtree of another binary tree
 Find the diameter of a binary tree
@@ -101,8 +107,3 @@ Check if a binary tree is a min-heap or not
 Invert alternate levels of a perfect binary tree
 
 Compute the maximum number of nodes at any level in a binary tree
-Print right view of a binary tree
-Find the minimum depth of a binary tree
-Depth-First Search (DFS) vs Breadth-First Search (BFS)
-Print nodes of a binary tree in vertical order
-Perform vertical traversal of a binary tree

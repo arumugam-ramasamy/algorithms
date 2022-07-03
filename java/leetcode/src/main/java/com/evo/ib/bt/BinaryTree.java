@@ -1,10 +1,7 @@
 package com.evo.ib.bt;
 
 import javax.naming.InsufficientResourcesException;
-import java.util.ArrayList;
-import java.util.List;
-import java.util.Stack;
-import java.util.Vector;
+import java.util.*;
 
 /**
  * Created by PranavsMac on 9/29/20.
@@ -287,4 +284,53 @@ public class BinaryTree  {
         }
     }
 
+    public boolean checkIdentical (BinaryTree mine) {
+        if (root == null && mine == null) return true ;
+        if (root == null|| mine == null) return false ;
+        Queue<Node> one = new LinkedList<>() ;
+        Queue<Node> other = new LinkedList<>() ;
+        one.add(this.getRoot()) ;
+        other.add(mine.getRoot()) ;
+
+        int oneCount = one.size() ;
+        int otherCount = other.size() ;
+        int nextOneCount = 0 ;
+        int nextOtherCount = 0 ;
+
+        while (one.size() > 0 && other.size() > 0) {
+
+            while (oneCount != 0) {
+                Node thisOne = one.remove() ;
+                Node otherOne = other.remove() ;
+
+                if (thisOne.getData() != otherOne.getData())  return false ;
+                oneCount-- ;
+                otherCount-- ;
+                if (thisOne.getLeft() != null) {
+                    one.add(thisOne.getLeft()) ;
+                    nextOneCount++ ;
+                }
+                if (thisOne.getRight() != null) {
+                    one.add(thisOne.getRight()) ;
+                    nextOneCount++ ;
+                }
+                if (otherOne.getLeft() != null) {
+                    other.add(otherOne.getLeft()) ;
+                    nextOtherCount++ ;
+                }
+                if (otherOne.getRight() != null) {
+                    other.add(otherOne.getRight()) ;
+                    nextOtherCount++ ;
+                }
+            }
+            if (nextOneCount != nextOtherCount) return false ;
+            oneCount = nextOneCount ;
+            otherCount = nextOtherCount ;
+            nextOneCount = 0 ;
+            nextOneCount = 0 ;
+
+        }
+
+        return true ;
+    }
 }

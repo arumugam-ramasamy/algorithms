@@ -21,5 +21,12 @@ public class NewListNode {
         this.next = next;
     }
 
+    public NewListNode getArbitrary() {
+        return arbitrary;
+    }
+
+    public void setArbitrary(NewListNode arbitrary) {
+        this.arbitrary = arbitrary;
+    }
 }
 

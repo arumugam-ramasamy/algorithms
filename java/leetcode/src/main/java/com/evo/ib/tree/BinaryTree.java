@@ -1,6 +1,8 @@
 package com.evo.ib.tree;
 
 
+import com.evo.ib.bt.Node;
+
 import java.util.*;
 
 public class BinaryTree {
@@ -343,5 +345,53 @@ public class BinaryTree {
         return node;
     }
 
+    public boolean checkIdentical (BinaryTree mine) {
+        if (root == null && mine == null) return true ;
+        if (root == null|| mine == null) return false ;
+        Queue<TreeNode> one = new LinkedList<>() ;
+        Queue<TreeNode> other = new LinkedList<>() ;
+        one.add(this.getRoot()) ;
+        other.add(mine.getRoot()) ;
 
+        int oneCount = one.size() ;
+        int otherCount = other.size() ;
+        int nextOneCount = 0 ;
+        int nextOtherCount = 0 ;
+
+        while (one.size() > 0 && other.size() > 0) {
+
+            while (oneCount != 0) {
+                TreeNode thisOne = one.remove() ;
+                TreeNode otherOne = other.remove() ;
+
+                if (thisOne.getVal() != otherOne.getVal())  return false ;
+                oneCount-- ;
+                otherCount-- ;
+                if (thisOne.getLeft() != null) {
+                    one.add(thisOne.getLeft()) ;
+                    nextOneCount++ ;
+                }
+                if (thisOne.getRight() != null) {
+                    one.add(thisOne.getRight()) ;
+                    nextOneCount++ ;
+                }
+                if (otherOne.getLeft() != null) {
+                    other.add(otherOne.getLeft()) ;
+                    nextOtherCount++ ;
+                }
+                if (otherOne.getRight() != null) {
+                    other.add(otherOne.getRight()) ;
+                    nextOtherCount++ ;
+                }
+            }
+            if (nextOneCount != nextOtherCount) return false ;
+            oneCount = nextOneCount ;
+            otherCount = nextOtherCount ;
+            nextOneCount = 0 ;
+            nextOtherCount = 0 ;
+
+        }
+
+        return true ;
+    }
 }

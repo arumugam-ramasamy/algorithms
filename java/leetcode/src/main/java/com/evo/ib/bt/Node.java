@@ -1,6 +1,6 @@
 package com.evo.ib.bt;
 
-class Node<T extends Comparable<?>> implements  Comparable {
+public class Node<T extends Comparable<?>> implements  Comparable {
     Node<T> left, right;
     T data;
 
