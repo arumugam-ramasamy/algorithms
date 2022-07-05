@@ -1,5 +1,7 @@
 package com.evo.ib.tree;
 
+import sun.reflect.generics.tree.Tree;
+
 import java.util.*;
 
 public class BinaryTreeHard {
@@ -271,5 +273,33 @@ public class BinaryTreeHard {
 
         }
         return null ;
+     }
+
+     public int heightOfTree(TreeNode root) {
+
+        int height = 0 ;
+        if (root == null) return height ;
+        Queue<TreeNode> queue = new LinkedList<>() ;
+        int levelCount = 1 ;
+        queue.add(root) ;
+        int nextLevelCount = 0 ;
+        while (queue.size() > 0) {
+            height++ ;
+            while (levelCount > 0) {
+                TreeNode cur = queue.remove() ;
+                if (cur.getLeft() != null) {
+                    queue.add(cur.getLeft()) ;
+                    nextLevelCount++ ;
+                }
+                if (cur.getRight() != null) {
+                    queue.add(cur.getRight()) ;
+                    nextLevelCount++ ;
+                }
+                levelCount-- ;
+            }
+            levelCount = nextLevelCount ;
+            nextLevelCount = 0 ;
+        }
+        return height ;
      }
 }
