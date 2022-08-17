@@ -2,17 +2,65 @@ package com.evo.ib.ns;
 
 public class ConvertDecimalToBinary {
 
+    public static String convertitb (int allval) {
+        if (allval >= 0) return convertdtb(allval) ;
+        String posstr = convertdtb(allval * -1) ;
+        return (twosComplement(posstr)) ;
+    }
+
+    public static String twosComplement (String posstr) {
+        StringBuilder sb = new StringBuilder() ;
+        String onec = OneComplement(posstr) ;
+        int i = posstr.length()-1 ;
+        int carry = 1 ;
+        while (i >= 0){
+            if (onec.charAt(i) == '0') {
+                if (carry == 1) {
+                    sb.append("1");
+                    carry = 0;
+                }
+                break ;
+            }
+            else {
+                sb.append("0") ;
+                carry = 1 ;
+            }
+            i-- ;
+        }
+
+        while (i >= 0) {
+            sb.append(posstr.charAt(i));
+            i--;
+        }
+        return  sb.reverse().toString() ;
+
+
+    }
+
+    public static String OneComplement (String posstr) {
+        StringBuilder sb = new StringBuilder() ;
+        for (int i = 0 ; i < posstr.length() ; i++) {
+            if (posstr.charAt(i) == '1')
+                sb.append("0") ;
+            else {
+                sb.append("1") ;
+            }
+        }
+        return  sb.toString() ;
+    }
     public static String convertdtb (int dec) {
-        String dtb = "" ;
+        StringBuilder sb = new StringBuilder() ;
 
         if (dec < 2) return Integer.toString(dec) ;
         while (dec >= 2) {
-            dtb = Integer.toString(dec % 2) + dtb ;
+            sb.append( Integer.toString(dec % 2) ) ;
             dec = dec / 2 ;
         }
-        if (dec == 1) dtb = "1" + dtb ;
+        if (dec == 1) sb.append("1") ;
+        for (int i = sb.length() ; i < 32 ; i++)
+            sb.append("0") ;
 
-        return dtb ;
+        return sb.reverse().toString() ;
     }
 
     public static String bitsInInteger (int val) {
@@ -46,10 +94,12 @@ public class ConvertDecimalToBinary {
     }
 
     public static void main(String[] args) {
-        System.out.println(convertdtb(100));
-        System.out.println(convertbtd(convertdtb(100)));
-        System.out.println(convertdtb(10));
-        System.out.println(bitsInInteger(-4));
-        System.out.println(Integer.toBinaryString(-4));
+        System.out.println("100 in binary is " + convertdtb(100));
+        System.out.println(convertdtb(100)  + " back to decimal is " +
+                convertbtd( convertdtb(100)));
+
+        System.out.println(bitsInInteger(-100));
+        System.out.println(Integer.toBinaryString(-100));
+        System.out.println(convertitb(-100));
     }
 }
