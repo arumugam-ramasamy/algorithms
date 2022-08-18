@@ -27,9 +27,9 @@ public class ConvertDecimalToBinary {
             }
             i-- ;
         }
-
+        i-- ;
         while (i >= 0) {
-            sb.append(posstr.charAt(i));
+            sb.append(onec.charAt(i));
             i--;
         }
         return  sb.reverse().toString() ;
@@ -94,12 +94,14 @@ public class ConvertDecimalToBinary {
     }
 
     public static void main(String[] args) {
-        System.out.println("100 in binary is " + convertdtb(100));
-        System.out.println(convertdtb(100)  + " back to decimal is " +
-                convertbtd( convertdtb(100)));
+        int testnegative = -1000 ;
+        int testpositive = 101 ;
+        System.out.println(testpositive + " in binary is " + convertdtb(testpositive));
+        System.out.println(convertdtb(testpositive)  + " back to decimal is " +
+                convertbtd( convertdtb(testpositive)));
 
-        System.out.println(bitsInInteger(-100));
-        System.out.println(Integer.toBinaryString(-100));
-        System.out.println(convertitb(-100));
+        System.out.println(bitsInInteger(testnegative));
+        System.out.println(Integer.toBinaryString(testnegative));
+        System.out.println(convertitb(testnegative));
     }
 }
