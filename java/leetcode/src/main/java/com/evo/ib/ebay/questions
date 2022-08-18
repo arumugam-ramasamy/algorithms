@@ -1,0 +1,87 @@
+Sum problem, matrix problems and graph problems
+Questions about recursion and string
+Sorting, simple algorithms, text parsing on the same problem getting progressively harder
+- Coding question: Given an array that represent a row of seats in a movie theater, where 0 represents an empty seat and 1 represents a occupied seat, return the index of a empty seat that is the most socially distant from the other patrons.
+
+Round 1 : (Hackerearth based test) [Time : 1h15m]  This round had 2 questions.   Given an array of size N and K queries, find the number of segments containing the index(from queires) which is leftmost or rightmost and the number at index is >= each elements of that segment Eg : arr[] = [1,2,3] K = [3] -> o/p : 3 ([3],[2,3][1,2,3]) Modification of this question(https://leetcode.com/problems/find-k-closest-elements/). Verdict: cleared  Round 2 : F2F [Time : 1h]  Given an array and a target sum k, find all a[i] + a[j] = k. Follow up: handle if the array has both duplicate and non-duplicate elements Find the first non-repeating character in the string (with only lowercase letters) https://leetcode.com/problems/first-unique-character-in-a-string/. Follow up : i ) contains both lowercase & uppercase ii) case-insensitive & case sensitive iii) in O(1) space complexity Verdict: cleared  Round 3 : F2F [Time : 1h]  Find if a linked list is a palindrome [expected time & space complexity : O(n) & O(1)]. https://leetcode.com/problems/palindrome-linked-list/ Find the diameter of the binary tree(https://leetcode.com/problems/diameter-of-binary-tree/) Validate if a tree is BST(https://leetcode.com/problems/validate-binary-search-tree/)
+Coding question: Implement your own string comparator. Check if a linked list is palindrome. Implement BST.  System design question: Flash sale system Flight booking system 
+Given 2 lists and asked if the list is subset of other or not? Questions on space and time complexity. Improve the solution on space complexity
+ 
+Answer Question
+Rotate a matrix by 90 degree without using any extra space
+Answer Question
+Programming questions on synchronization, locks
+Answer Question
+System design on uploading files to Google drive
+Answer Question
+Managerial interview - Questions on design patterns
+Answer Question
+
+Leetcode medium questions : palindrome detections, cycle in a linked list, next greatest num
+
+Design some ebay API + coding LC medium top 100
+The coding interview is a task to code on: services, async processing, big data. 2.5 hours to code, then review.
+write a multithreaded code that access a REST service and prints out a report out of the data gathered
+design a system that can create reports from huge data
+counter=0
+ two threads a doing "for i = 0 ; i< 10; i++) counter++;
+ what are the possible values of counter
+
+. Write program to identify if two subnets collide.
+Write program to convert a BST to heap (such as the largest number is root, the second largest is to the left of root, the third largest to right of root and so on)
+Memory tuning on millions of product objects.
+
+explain priority queues
+String reverse and DB questions
+
+Given staircase on which you can climb 1,2 or 3 steps at time. Give count of all combinations to reach top of staircase.
+ 
+ Doubly linked list, find middle element and delete.
+ 
+ Remove all occurence of a character out of string in array.
+
+Write a program in Java to assess a given string whether it complies with following patterns. Return true if a given string complies with these patterns else false.
+ 
+ N = N1 + N2 
+ N>= N1 >= N2
+ where N is the Nth element in the string or element at Nth position;
+ N1 is the (N-1) element in the string & N2 is the (N-2) element in the string.
+ 
+ Example 1: 224610 
+ Elements in this string are 2, 2, 4, 6, 10. 
+ First Set: 2+2=4 (N2=2; N1=2 & N= 4); 
+ Second Set: 2+4=6 (N2=2; N1=4 & N=6); 
+ Third Set: 4+6=10 (N2=4; N1=6 & N= 10)
+ 
+ Example 2: 1112233558 
+ Elements in this string are 1, 11, 12, 23, 35, 58
+ 
+ Example 3: 1101102203 
+ Elements in this string are 1, 101, 102, 203
+
+Heap construction
+
+Implement an n-ary tree
+
+what is difference between 
+ Arraylist a = new Arraylist (); and
+ List a = new Arraylist () ?
+
+what design patterns have you used .. explain how.
+
+Difference between singleton and a class with all static methods.
+
+Implement heap.
+
+Most questions were very simple like what is the SingleThreadModel in Servlets
+
+How to identify the lowest level common ancestor for a given 2 nodes in a tree(not binary tree)
+
+What is dynamic programming
+
+what is deadlock and also asked for a tool or way to identify dead lock. ( basically the guy had no idea what he is asking for)
+
+Give 2 stack and implement a Queue.
+
+What are Java design patters, explain 'xxx' design pattern.
+
