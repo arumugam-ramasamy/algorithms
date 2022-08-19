@@ -218,18 +218,18 @@ public class LinkedList {
         return head ;
     }
 
-    public static ListNode mergeKLinkedList (List<ListNode> lls){
+    public static ListNode mergeKLinkedList (List<ListNode> lists){
         Comparator<LinkedCompare> dataSorter = Comparator.comparing(LinkedCompare::getData);
         Queue<LinkedCompare> priorityQueue = new PriorityQueue<>(dataSorter);
-        for (int i = 0 ; i < lls.size() ; i++) {
-            priorityQueue.add(new LinkedCompare(lls.get(i).getVal(), i)) ;
+        for (int i = 0 ; i < lists.size() ; i++) {
+            priorityQueue.add(new LinkedCompare(lists.get(i).getVal(), i)) ;
         }
         ListNode headMerged = null ;
         ListNode curMerged = headMerged ;
         LinkedCompare curQueue = priorityQueue.poll() ;
 
         while (curQueue != null) {
-            ListNode curNode = lls.get(curQueue.getInd()) ;
+            ListNode curNode = lists.get(curQueue.getInd()) ;
             if (headMerged == null) {
                 headMerged = curNode ;
                 curMerged = headMerged ;
@@ -239,7 +239,7 @@ public class LinkedList {
                 curMerged = curMerged.getNext() ;
             }
             curNode = curNode.getNext() ;
-            lls.set(curQueue.getInd(), curNode)  ;
+            lists.set(curQueue.getInd(), curNode)  ;
             if (curNode != null)
                 priorityQueue.add(new LinkedCompare(curNode.getVal(), curQueue.getInd())) ;
             curQueue = priorityQueue.poll() ;
