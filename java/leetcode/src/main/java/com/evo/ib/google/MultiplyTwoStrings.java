@@ -17,13 +17,17 @@ public class MultiplyTwoStrings {
             num1 = num1.substring(1) ;
             num2 = num2.substring(1) ;
         }
-        num1 = new StringBuffer(num1).reverse().toString() ;
-        num2 = new StringBuffer(num2).reverse().toString() ;
+       // num1 = new StringBuffer(num1).reverse().toString() ;
+       // num2 = new StringBuffer(num2).reverse().toString() ;
         int [] res = new int[num1.length() + num2.length()] ;
-
-        for (int i = 0 ; i < num1.length() ; i++) {
-            for (int j = 0 ; j < num2.length() ; j++) {
-                res[i+j] = res[i+j] + (num1.charAt(i) - '0') *
+        int resi = num1.length()-1 ;
+        int resj = num2.length()-1;
+        int restotal = resi+ resj ;
+        int resindex ;
+        for (int i = num1.length()-1 ; i >= 0 ; i--) {
+            for (int j = num2.length()-1; j >= 0 ; j--) {
+                resindex = restotal-i -j ;
+                res[resindex] = res[resindex] + (num1.charAt(i) - '0') *
                         (num2.charAt(j) - '0') ;
             }
         }
