@@ -1,9 +1,7 @@
-package com.evo.ib.google;
+package com.evo.ib.google.ArrAndStrings;
 
-import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.Comparator;
-import java.util.List;
 
 class Interval
 {

@@ -1,4 +1,4 @@
-package com.evo.ib.google;
+package com.evo.ib.google.ArrAndStrings;
 
 public class ContainerWithMostWater {
 

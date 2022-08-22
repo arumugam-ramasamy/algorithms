@@ -1,4 +1,4 @@
-package com.evo.ib.google;
+package com.evo.ib.google.ArrAndStrings;
 
 import java.util.ArrayList;
 import java.util.HashSet;

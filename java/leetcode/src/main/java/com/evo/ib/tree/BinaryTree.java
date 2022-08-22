@@ -318,7 +318,7 @@ public class BinaryTree {
         return node;
     }
 
-    public static TreeNode arrayToBST(Integer arr[], int start, int end) {
+    public static TreeNode arrayToBST(int[] arr, int start, int end) {
 
         TreeNode node = new TreeNode(arr[0]);
         Queue<TreeNode> tree = new LinkedList<>() ;
@@ -327,20 +327,28 @@ public class BinaryTree {
         int ind = 1 ;
         while (tree.size() > 0) {
             TreeNode cur = tree.remove() ;
+            if (ind >= arr.length) break ;
             Integer val = arr[ind] ;
-            if (val != null) {
+            if (val != -111) {
                 TreeNode ins = new TreeNode(arr[ind]) ;
                 cur.left = ins  ;
                 tree.add(ins) ;
-                ind++ ;
             }
+            else {
+                cur.left = null ;
+            }
+            ind++ ;
+            if (ind >= arr.length) break ;
             val = arr[ind] ;
-            if (val != null) {
+            if (val != -111) {
                 TreeNode ins = new TreeNode(arr[ind]) ;
                 cur.right = ins  ;
                 tree.add(ins) ;
-                ind++ ;
             }
+            else {
+                cur.right = null ;
+            }
+            ind++ ;
         }
         return node;
     }
@@ -393,5 +401,12 @@ public class BinaryTree {
         }
 
         return true ;
+    }
+
+    public static void main(String[] args) {
+        int [] arr = {-10,9,20, -111, -111,15,7} ;
+        BinaryTree  tree = new BinaryTree()  ;
+        TreeNode node = arrayToBST(arr, 0, arr.length) ;
+        tree.printTree(node, null, false);
     }
 }

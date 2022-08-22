@@ -1,6 +1,6 @@
 package com.evo.ib.google.test;
 
-import com.evo.ib.google.LinkedListProblems;
+import com.evo.ib.google.linkedlist.LinkedListProblems;
 import com.evo.ib.linkedlist.NewListNode;
 
 import java.util.*;

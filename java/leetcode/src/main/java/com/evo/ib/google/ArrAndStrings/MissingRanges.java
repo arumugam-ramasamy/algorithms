@@ -1,4 +1,4 @@
-package com.evo.ib.google;
+package com.evo.ib.google.ArrAndStrings;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -45,6 +45,41 @@ public class MissingRanges {
         if (nums == null || nums.length == 0) return null ;
         List<String> res = new ArrayList<>() ;
 
+        int cur = nums[0] ;
+
+        if (lower < cur){
+            res.add(getRangeString(lower, cur-1)) ;
+        }
+        for (int i = 1 ; i < nums.length ; i++) {
+            if (nums[i] == (nums[i-1] +1)) continue;
+            int missinglow = nums[i-1] +1 ;
+            int missinghigh = nums[i] - 1 ;
+            if (upper <  nums[i]) {
+                missinghigh = upper ;
+            }
+            res.add(getRangeString(missinglow, missinghigh)) ;
+
+        }
+
+        if (upper > nums[nums.length-1])
+            res.add(getRangeString(nums[nums.length-1]+1, upper)) ;
+
         return  res ;
+    }
+
+    public static String getRangeString (int missinglower, int missingupper) {
+        if (missinglower > missingupper) return null ;
+        if (missinglower == missingupper) {
+            String res = "[" + missinglower + "," + missinglower + "] --> \"" + missinglower + "\"" ;
+            return  res ;
+        }
+        String res = "[" + missinglower + "," + missingupper + "] --> \"" + missinglower +
+                "->" + missingupper + "\"" ;
+        return res ;
+    }
+
+    public static void main(String[] args) {
+        int [] arr = {5, 7,11,50,75} ;
+        System.out.println(findMissingRanges( arr, 0, 99));
     }
 }

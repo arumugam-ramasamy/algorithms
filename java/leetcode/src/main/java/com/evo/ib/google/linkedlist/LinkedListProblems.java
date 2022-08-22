@@ -1,4 +1,4 @@
-package com.evo.ib.google;
+package com.evo.ib.google.linkedlist;
 
 import com.evo.ib.linkedlist.NewListNode;
 

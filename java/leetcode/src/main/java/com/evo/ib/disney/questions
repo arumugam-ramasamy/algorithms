@@ -1,0 +1,28 @@
+find the first unique element in an array
+Given an array and a target value, return true if there is a pair of numbers in the array that sum to this target.
+Reverse words in a sentence
+Difference between String Builder and String Buffer, describe observer pattern, explain what a string pool is, convert integer to binary representation in string form, check if binary tree is balanced, inorder traversal of binary tree.
+Name some design patterns. Name classes in Java.util. Write a method to prove a binary tree is symmetric. What's the difference between an abstract class and an interface? What is reactive programming in Java?
+Remove duplicates from a string
+How would you code a linked list in C++? This was followed by several questions regarding how I would extend the idea in given circumstances
+Which software development life cycle are you most familiar with, can you explain a little bit.
+Algorithm question was about autocomplete of words given an input string and frequency counts of words.
+Very easy, asked about basic technologies like REST and grep and asked basic data structure questions on hashtables, lists, etc. Algorithm question was about autocomplete of words given an input string and frequency counts of words.
+Technical questions were tough. Was asked to write a crawler, implement powerset algorithm, design a an elevator system for a gaming framework.
+Write code to reverse the digits in an integer.
+How would you design YouTube? Which data structures and database schemas would you use.
+How would you traverse a file system?
+In a typical database query, how would you speed up an sql query that consisted of many conditions ANDED (&&) together?
+In a text document filled with unstructured characters containing certain strings, how would you attain the unique strings in an ordered (alphabetized) list?
+What is the difference between a thread and process?
+What is the Linux command to check on the CPU resources being utilized by a process
+Java core,collection, threads, memory management, OOP, DBA, Spring, Hibernate, Rest WS, Sorting Algorithms, Oracle, Maven, Windows, Linux, create a BTree, Pair Key value, Shell programming, IOS experience, Android development, Python scripts, Design Patterns.
+What is L1 and L2 Cache in Hibernate?
+What is the purpose of the fork/join framework that has been incorporated since java 7?
+Implement a Stack. Last time I'd done that was around 1992, but I was still able to code this from memory. It was a stupid question, revealing nothing about my ability to solve problems and code solutions given that NO ONE EVER implements Stacks by hand anymore.
+
+Second interview asked to implement a function that returns true/false if a binary tree is well constructed.
+Java threading implementations
+Given a dark room and a drawer full of some black and some white socks, if you pick correctly, you get the job, if you pick wrong you'll die. How many socks do you have to pick to get N pairs of black socks and M pairs of white socks.
+How would you implement capturing a bit stream of input coming in from a device in Java?
+
