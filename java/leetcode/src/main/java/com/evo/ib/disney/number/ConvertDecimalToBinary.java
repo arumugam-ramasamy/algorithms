@@ -1,4 +1,4 @@
-package com.evo.ib.ns;
+package com.evo.ib.disney.number;
 
 public class ConvertDecimalToBinary {
 
