@@ -34,8 +34,18 @@ public class HeightOfTree {
                 nodeCount--;
             }
         }
-
     }
+
+    public static boolean isTreeBalanced(TreeNode root) {
+        if (root == null) return true ;
+        int heightleft = height(root.left) ;
+        int heightright = height(root.right) ;
+
+        if (Math.abs(heightleft - heightright) <= 1)
+            return true ;
+        return false ;
+    }
+
 
     public static void main(String[] args) {
         int[] arr = {1, 3, 9, 2, 4, 5, 4, 9, 5, 8};
@@ -43,5 +53,6 @@ public class HeightOfTree {
         BinaryTree bt = new BinaryTree();
         bt.printTree(root, null, false);
         System.out.println(height(root));
+        System.out.println(isTreeBalanced(root));
     }
 }
