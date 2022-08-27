@@ -1,7 +1,7 @@
 package com.evo.ib.google.test;
 
 import com.evo.ib.google.linkedlist.LinkedListProblems;
-import com.evo.ib.linkedlist.NewListNode;
+import com.evo.ib.linkedlist.Node;
 
 import java.util.*;
 
@@ -11,7 +11,7 @@ public class TestLinkedList {
         Random rand = new Random() ;
         int upperbound = 100 ;
         LinkedListProblems ll = new LinkedListProblems() ;
-        List<NewListNode> nln = new ArrayList<>() ;
+        List<Node> nln = new ArrayList<>() ;
         int count = rand.nextInt(20) + 1 ;
         for (int i = 0 ; i <  count ; i++) {
             int val = rand.nextInt(upperbound)  + (i * upperbound) ;
@@ -21,12 +21,12 @@ public class TestLinkedList {
             int ind = 0 ;
             if (nln.size() != 0) ind = rand.nextInt(nln.size()) ;
             if (ind < nln.size() && dec < 6) {
-                ll.getCur().setArbitrary(nln.get(ind));
+                ll.getCur().setRandom(nln.get(ind));
             }
         }
 
         ll.printll(ll.getHead());
-        NewListNode newHead = ll.deepCopy();
+        Node newHead = ll.deepCopy();
         ll.printll(newHead);
 
     }

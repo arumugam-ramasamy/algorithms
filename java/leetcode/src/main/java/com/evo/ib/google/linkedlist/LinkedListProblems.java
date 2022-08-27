@@ -1,23 +1,23 @@
 package com.evo.ib.google.linkedlist;
 
-import com.evo.ib.linkedlist.NewListNode;
+import com.evo.ib.linkedlist.Node;
 
 import java.util.HashMap;
 import java.util.Map;
 
 public class LinkedListProblems {
-        NewListNode head;
-        NewListNode cur;
+        Node head;
+        Node cur;
 
         public LinkedListProblems() {
                 head = cur = null;
         }
 
         public void insertNode(int data) {
-                NewListNode listNode = new NewListNode();
+                Node listNode = new Node();
                 listNode.setVal(data);
                 listNode.setNext(null);
-                listNode.setArbitrary(null);
+                listNode.setRandom(null);
                 if (head == null) {
                         head = listNode;
                         cur = head;
@@ -27,34 +27,34 @@ public class LinkedListProblems {
                 cur = cur.getNext();
         }
 
-        public NewListNode getHead() {
+        public Node getHead() {
                 return head;
         }
 
-        public void setHead(NewListNode head) {
+        public void setHead(Node head) {
                 this.head = head;
         }
 
-        public NewListNode getCur() {
+        public Node getCur() {
                 return cur;
         }
 
-        public void setCur(NewListNode cur) {
+        public void setCur(Node cur) {
                 this.cur = cur;
         }
 
-        public NewListNode deepCopy() {
-                NewListNode newHead = null;
-                NewListNode newCur;
-                Map<NewListNode, NewListNode> arbitray = new HashMap<>();
+        public Node deepCopy() {
+                Node newHead = null;
+                Node newCur;
+                Map<Node, Node> arbitray = new HashMap<>();
                 if (getHead() == null) return null;
 
                 newCur = getHead();
-                NewListNode prev = null;
+                Node prev = null;
                 while (newCur != null) {
-                        NewListNode temp = new NewListNode();
+                        Node temp = new Node();
                         temp.setVal(newCur.getVal());
-                        temp.setArbitrary(newCur.getArbitrary());
+                        temp.setRandom(newCur.getRandom());
                         if (prev == null) {
                                 newHead = temp;
                         } else {
@@ -70,8 +70,8 @@ public class LinkedListProblems {
                 newCur = newHead;
 
                 while (newCur != null) {
-                        if (newCur.getArbitrary() != null) {
-                                newCur.setArbitrary(arbitray.get(newCur.getArbitrary()));
+                        if (newCur.getRandom() != null) {
+                                newCur.setRandom(arbitray.get(newCur.getRandom()));
                         }
                         newCur= newCur.getNext() ;
                 }
@@ -80,11 +80,11 @@ public class LinkedListProblems {
                 return newHead;
         }
 
-        public void printll(NewListNode p) {
+        public void printll(Node p) {
                 while (p != null) {
                         System.out.print(p.getVal());
-                        if (p.getArbitrary() != null) {
-                                System.out.print(" , arbirary = " + p.getArbitrary().getVal() + " ");
+                        if (p.getRandom() != null) {
+                                System.out.print(" , arbirary = " + p.getRandom().getVal() + " ");
                         }
                         System.out.print("--->") ;
                         p = p.getNext();
