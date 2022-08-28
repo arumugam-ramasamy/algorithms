@@ -42,8 +42,18 @@ All the values of nums are unique.
 public class MissingRanges {
 
     public static  List<String> findMissingRanges(int[] nums, int lower, int upper) {
-        if (nums == null || nums.length == 0) return null ;
+        if (nums == null ) return null ;
+
         List<String> res = new ArrayList<>() ;
+        if (nums.length == 0) {
+            if (lower == upper) {
+                res.add (Integer.toString(lower)) ;
+            }
+            else {
+                res.add(lower + "->" + upper) ;
+            }
+            return res ;
+        }
 
         int cur = nums[0] ;
 
