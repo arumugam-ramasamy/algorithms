@@ -5,8 +5,8 @@ import java.util.PriorityQueue;
 import java.util.Random;
 
 public class MedianStream {
-    PriorityQueue<Integer> minHeap;
-    PriorityQueue<Integer> maxHeap;
+    PriorityQueue<Double> minHeap;
+    PriorityQueue<Double> maxHeap;
 
     MedianStream() {
         minHeap = new PriorityQueue<>();
@@ -15,12 +15,12 @@ public class MedianStream {
 
     public void addNum(int num) {
         if (!minHeap.isEmpty() && num < minHeap.peek()) {
-            maxHeap.offer(num);
+            maxHeap.offer((double) num);
             if (maxHeap.size() > (minHeap.size() + 1)) {
                 minHeap.offer(maxHeap.poll());
             }
         } else {
-            minHeap.offer(num);
+            minHeap.offer((double) num);
             if (minHeap.size() > (maxHeap.size() + 1)) {
                 maxHeap.offer(minHeap.poll());
             }
@@ -28,7 +28,7 @@ public class MedianStream {
        // System.out.println(minHeap.size() + "," + maxHeap.size());
     }
 
-    public int getMedian() {
+    public double getMedian() {
         System.out.println("The size are " + minHeap.size() + "," + maxHeap.size());
         System.out.println("The top elements are " + minHeap.peek() + "," + maxHeap.peek());
         if (minHeap.size() > maxHeap.size()) {
