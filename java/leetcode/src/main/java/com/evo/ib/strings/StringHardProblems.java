@@ -24,19 +24,19 @@ public class StringHardProblems {
         return "" ;
     }
 
-    public static Set<Integer> KMP (String str, String pat) {
-        if (pat.length() == 0) return null ;
-        if (str.length() == 0) return null ;
-        int [] lps = new int[pat.length()] ;
-        computeLPS(pat, lps);
+    public static Set<Integer> KMP (String haystack, String needle) {
+        if (needle.length() == 0) return null ;
+        if (haystack.length() == 0) return null ;
+        int [] lps = new int[needle.length()] ;
+        computeLPS(needle, lps);
         int i = 0 ;
         int j = 0 ;
-        int patlength = pat.length() ;
-        int strlength = str.length() ;
+        int patlength = needle.length() ;
+        int strlength = haystack.length() ;
         Set <Integer> matches = new HashSet<>() ;
 
         while (i < strlength) {
-            if (pat.charAt(j) == str.charAt(i)) {
+            if (needle.charAt(j) == haystack.charAt(i)) {
                 ++i ;
                 ++j ;
             }
@@ -46,7 +46,7 @@ public class StringHardProblems {
                     j = lps[j-1] ;
             }
 
-            else if (i < strlength && pat.charAt(j) != str.charAt(i)) {
+            else if (i < strlength && needle.charAt(j) != haystack.charAt(i)) {
                     if (j!= 0) {
                         j = lps[j-1] ;
                     }
