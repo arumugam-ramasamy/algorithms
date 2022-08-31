@@ -2,13 +2,29 @@ package com.evo.ib.arrays;
 
 public class RotatedArray {
 
-    public static void rotateArray (int [] arr, int k) {
+    public static void rotateArray (int [] nums, int k) {
+        if (nums == null || nums.length <= 1) return ;
+        if (k == 0) return ;
+        if (k > nums.length) k = k % nums.length;
+        if (nums.length == 2 && k == 1) {
+            int temp = nums[1] ;
+            nums[1] = nums[0] ;
+            nums[0] = temp ;
+            return ;
+        }
 
-        revArray(arr, 0, k) ;
-        printArray(arr);
-        revArray(arr, k+1, arr.length-1) ;
-        printArray(arr);
-        revArray(arr, 0, arr.length-1) ;
+      /*  if (k%2 == 0){
+            revArray(nums, 0, k-1) ;
+            revArray(nums, k, nums.length-1) ;
+        }
+        else {
+            revArray(nums, 0, k) ;
+            revArray(nums, k+1, nums.length-1) ;
+        }
+*/
+        revArray(nums, 0, k) ;
+        revArray(nums, k+1, nums.length-1) ;
+        revArray(nums, 0, nums.length-1) ;
 
     }
 
@@ -31,9 +47,9 @@ public class RotatedArray {
 
     public static void  main (String [] args) {
 
-        int [] arr = {1,2,3,4,5,6,7} ;
+        int [] arr = {1, 2, 3} ;
         printArray(arr);
-        rotateArray(arr, 3);
+        rotateArray(arr, 2);
         printArray(arr);
     }
 }
