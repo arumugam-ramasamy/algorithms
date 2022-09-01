@@ -1,0 +1,29 @@
+Experience based questions, System design, Scalability, Sorting an array without using Collections.sort()
+To ask a simple Synchronization between threads and lock questions. They create a strange scenario you'll go mad what is expected.
+ have developed a complex feature during my last job. I explained that to interviewer. Interviewer asked given a chance would you redesign it and how would you redesign it to improve efficiency and performance.
+ High level design of an API that returns stock information
+ Is Monolith bad, should we use Microservices all the times?
+ I was asked by the vice president to split a sentence into the words. The sentence contained the words in lower case characters without spaces and punctuation marks.
+ What is the difference between Factory and abstract factory Pattern
+ Experience based questions, System design, Scalability, Sorting an array without using Collections.sort()
+
+System design, class design for escalator
+Palindrome with linked list
+3. What is rate count in API how to implement it.
+4. Diff between Rest and Soap
+5. What is static and dynamic language
+6. Http verbs
+7. Sql query for users, language and mapping table, find username who speaks more than 3 language.
+8. Http response status 400 series
+9. OAuth
+
+Round 3 : Design Database for Exam and question, one exam can have multiple questions and question can have 3 types, 1: multi choice 2. true false 3. match the answer. you need to store all options and it's answer as well.
+What is indexing, it's type and advantage and disadvantage
+SQL Query : You have rows with timestamp, get number of entries in last 24 hrs group by 1 hr.
+
+Round 4 : 1. What is the reason behind leaving all previous companies?(Be care full while answering this, it went negative for me)
+2. When to use SQL and NoSql
+3. Design whatsapp server side in 5-10 mins.
+
+Round 5 : Asked about my thesis research and how do you approach today with same problem.
+what is a ||= b and why this is not a good idea.
