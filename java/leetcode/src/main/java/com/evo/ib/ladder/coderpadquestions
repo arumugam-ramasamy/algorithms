@@ -1,0 +1,115 @@
+/*
+ * Click `Run` to execute the snippet below!
+ */
+
+import java.io.*;
+import java.util.*;
+
+/*
+ * To execute Java, please define "static void main" on a class
+ * named Solution.
+ *
+ * If you need more classes, simply define them inline.
+ */
+
+class Solution {
+  public static void main(String[] args) {
+    ArrayList<String> strings = new ArrayList<String>();
+    strings.add("Hello, World!");
+    strings.add("Welcome to CoderPad.");
+    strings.add("This pad is running Java " + Runtime.version().feature());
+
+    for (String string : strings) {
+      System.out.println(string);
+    }
+  }
+
+  public class CollectDuplicates {
+    public static List <List <String>> getDuplicates (String path) {
+      
+      if (isPathExists(path) == false)  return null ;
+      if (isDirectory (path) == false) {
+      }
+      Queue<String> dirNames = new LinkedList<String> () ;
+      Map <String, List<String>> hashGroups = new HashMap <>() ;
+      dirNames.add(path) ;
+
+      while (dirNames.size() > 0) {
+          String dirName = dirnames.dequeue() ;
+          List<String> objects = getChildren(dirName) ;
+          for (String entity : objects ) {
+            if (isDirectory(entity)) {
+              dirnames.add(entity) ;
+            }
+            else {
+              String hashValue = computeHash(entity) ;
+              if (hashGroups.containsKey(hashValue)) {
+                List<String> filenames = hashGroup.get(hashValue) ;
+                filenames.add(entity) ;
+                hashGroups.put(hashValue, filenames) ;
+              }
+              else {
+                List<String> filenames = new ArrayList<>() ;
+                filenames.add(entity) ;
+                hashGroups.put(hashValue, filenames) ;
+              }
+
+            }
+
+          }
+        List<List<String>> res = new ArrayList<List<String>>>() ;
+         for (Map.Entry<String, List<String>> keyval : hashGroups.keySet()) {
+          if (keyval.getValue().size() > 1) {
+            res.add(keyval.getValue() ;
+          }
+
+      }
+      
+      return res ;
+      }
+  }
+}
+
+// List<String> getChildren (String dirname) 
+// boolean isDirectory (String entity)
+// String computeHash (String filename)
+// boolean isPathExists (String path) 
+
+// Your previous Markdown content is preserved below:
+
+
+// Write a function `find_dups(directory: string) -> list(list(string))` that, given a directory, returns all paths within the directory whose file content is identical. For example, given the file directory
+
+// ```
+// root/
+//   file1
+//   file2
+//   subdir/
+//     file3
+//     file4
+//     nested/
+//       file5
+//   file6
+//   file7
+// ```
+
+// where:
+// - `file1`, `file4`, and `file5` are duplicates
+// - `file3` and `file6` are duplicates
+// - `file2` and `file7` are unique
+
+// `find_dups('/root')` should return:
+
+// ```
+// [['/root/file1', '/root/subdir/file4', '/root/subdir/nested/file5'],
+//  ['/root/subdir/file3', '/root/file6']]
+// ``` 
+
+// Notes:
+
+// - You **should not** include unique files in the output - only lists of duplicate files
+// - Two files are "duplicates" if and only if their constituent bytes are exactly identical. Duplicate files can have unequal metadata - e.g. their filenames can be different.
+// - Although this is Coderpad, you don't need to get runnable code since you don't have a virtual filesystem.
+// - You may need a filesystem API. We don't expect you to have it memorized - you can look it up in your preferred language or we can either make up something reasonable!
+
+// public class 
