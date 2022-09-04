@@ -1,4 +1,4 @@
-package com.evo.ib.design.lrucache;
+package com.evo.ib.design.hard.lrucache;
 
 import java.util.Collection;
 import java.util.concurrent.atomic.AtomicInteger;

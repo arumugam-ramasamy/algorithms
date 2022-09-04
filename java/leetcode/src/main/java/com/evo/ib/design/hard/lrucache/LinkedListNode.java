@@ -1,4 +1,4 @@
-package com.evo.ib.design.lrucache;
+package com.evo.ib.design.hard.lrucache;
 
 
 public interface LinkedListNode<V> {

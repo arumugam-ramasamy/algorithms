@@ -1,4 +1,4 @@
-package com.evo.ib.design.lrucache;
+package com.evo.ib.design.hard.lrucache;
 
 public class DummyNode<T> implements LinkedListNode<T> {
     private DoublyLinkedList<T> list;
