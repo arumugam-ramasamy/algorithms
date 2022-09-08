@@ -5,13 +5,13 @@ import java.util.List;
 
 class BTreePrinter {
 
-    public static <T extends Comparable<?>> void printNode(Node<T> root) {
+    public static <T extends Comparable<?>> void printNode(RandomNode<T> root) {
         int maxLevel = BTreePrinter.maxLevel(root);
 
         printNodeInternal(Collections.singletonList(root), 1, maxLevel);
     }
 
-    private static <T extends Comparable<?>> void printNodeInternal(List<Node<T>> nodes, int level, int maxLevel) {
+    private static <T extends Comparable<?>> void printNodeInternal(List<RandomNode<T>> nodes, int level, int maxLevel) {
         if (nodes.isEmpty() || BTreePrinter.isAllElementsNull(nodes))
             return;
 
@@ -22,8 +22,8 @@ class BTreePrinter {
 
         BTreePrinter.printWhitespaces(firstSpaces);
 
-        List<Node<T>> newNodes = new ArrayList<Node<T>>();
-        for (Node<T> node : nodes) {
+        List<RandomNode<T>> newNodes = new ArrayList<RandomNode<T>>();
+        for (RandomNode<T> node : nodes) {
             if (node != null) {
                 System.out.print(node.data);
                 newNodes.add(node.left);
@@ -72,7 +72,7 @@ class BTreePrinter {
             System.out.print(" ");
     }
 
-    private static <T extends Comparable<?>> int maxLevel(Node<T> node) {
+    private static <T extends Comparable<?>> int maxLevel(RandomNode<T> node) {
         if (node == null)
             return 0;
 

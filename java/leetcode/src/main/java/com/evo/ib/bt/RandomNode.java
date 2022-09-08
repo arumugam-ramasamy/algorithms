@@ -1,10 +1,10 @@
 package com.evo.ib.bt;
 
-public class Node<T extends Comparable<?>> implements  Comparable {
-    Node<T> left, right;
+public class RandomNode<T extends Comparable<?>> implements  Comparable {
+    RandomNode<T> left, right;
     T data;
 
-    public Node(T data) {
+    public RandomNode(T data) {
         this.data = data;
     }
 
@@ -16,25 +16,25 @@ public class Node<T extends Comparable<?>> implements  Comparable {
         this.data = data;
     }
 
-    public Node<T> getLeft() {
+    public RandomNode<T> getLeft() {
         return left;
     }
 
-    public void setLeft(Node<T> left) {
+    public void setLeft(RandomNode<T> left) {
         this.left = left;
     }
 
-    public Node<T> getRight() {
+    public RandomNode<T> getRight() {
         return right;
     }
 
-    public void setRight(Node<T> right) {
+    public void setRight(RandomNode<T> right) {
         this.right = right;
     }
 
     @Override
     public int compareTo(Object o) {
-        Node<T> od = (Node <T>) o ;
+        RandomNode<T> od = (RandomNode<T>) o ;
 
         return  (this.getData().toString().compareTo( od.getData().toString())) ;
     }

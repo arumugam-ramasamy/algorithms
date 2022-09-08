@@ -1,6 +1,5 @@
 package com.evo.ib.bt;
 
-import javax.naming.InsufficientResourcesException;
 import java.util.*;
 
 /**
@@ -8,23 +7,23 @@ import java.util.*;
  */
 public class BinaryTree  {
 
-    Node<Integer>  root ;
+    RandomNode<Integer> root ;
 
     BinaryTree () {
         root = null ;
     }
 
-    public Node<Integer> getRoot() {
+    public RandomNode<Integer> getRoot() {
         return root;
     }
 
-    public void setRoot(Node<Integer> root) {
+    public void setRoot(RandomNode<Integer> root) {
         this.root = root;
     }
 
     public void insert (int data) {
 
-        Node< Integer> node = getRoot() ;
+        RandomNode< Integer> node = getRoot() ;
 
         if (node == null) {
             setRoot(createNode(data));
@@ -55,7 +54,7 @@ public class BinaryTree  {
         }
     }
 
-    public void getVectorData (Node<Integer>  node, Vector<Node<Integer>> vec) {
+    public void getVectorData (RandomNode<Integer> node, Vector<RandomNode<Integer>> vec) {
 
         if (node == null) return  ;
         getVectorData(node.getLeft(), vec);
@@ -64,11 +63,11 @@ public class BinaryTree  {
 
     }
 
-    public Node<Integer> buildBinaryTree (Vector<Node<Integer>> vec, int start, int end) {
+    public RandomNode<Integer> buildBinaryTree (Vector<RandomNode<Integer>> vec, int start, int end) {
 
         if (start > end ) return null ;
         int mid = (end + start) / 2 ;
-        Node<Integer> node = vec.get(mid) ;
+        RandomNode<Integer> node = vec.get(mid) ;
         node.setLeft(buildBinaryTree(vec, start, mid-1));
         node.setRight(buildBinaryTree(vec, mid+1, end));
         return node ;
@@ -78,15 +77,15 @@ public class BinaryTree  {
 
     public void balanceBST () {
 
-        Vector<Node<Integer>> data = new Vector<>() ;
+        Vector<RandomNode<Integer>> data = new Vector<>() ;
         getVectorData(getRoot(), data);
         setRoot(buildBinaryTree(data, 0, data.size()-1)) ;
 
     }
 
-    public Node createNode (int data) {
+    public RandomNode createNode (int data) {
 
-        Node<Integer> node = new Node<>(data) ;
+        RandomNode<Integer> node = new RandomNode<>(data) ;
         node.setLeft(null);
         node.setRight(null);
         return node ;
@@ -117,7 +116,7 @@ public class BinaryTree  {
         System.out.println();
     }
 
-    public void inOrderRec(Node<Integer> node ) {
+    public void inOrderRec(RandomNode<Integer> node ) {
 
         if (node == null) return ;
         inOrderRec(node.getLeft());
@@ -126,15 +125,15 @@ public class BinaryTree  {
 
     }
 
-    public List<Integer> postOrder1Stack (Node<Integer> node) {
+    public List<Integer> postOrder1Stack (RandomNode<Integer> node) {
         if (node == null) return null ;
         List<Integer> list = new ArrayList<>() ;
-        Stack<Node<Integer>> stack = new Stack<>() ;
+        Stack<RandomNode<Integer>> stack = new Stack<>() ;
         stack.push(node) ;
-        Node<Integer> prev = null ;
+        RandomNode<Integer> prev = null ;
 
         while (stack.size() > 0) {
-            Node<Integer> cur = stack.peek() ;
+            RandomNode<Integer> cur = stack.peek() ;
             if (prev == null || prev.getLeft() == cur   ||
                     prev.getRight() == cur) {
                 if (cur.getLeft() != null) {
@@ -169,8 +168,8 @@ public class BinaryTree  {
 
     }
 
-    public boolean nodeExists (Node tofind) {
-        Node node = getRoot() ;
+    public boolean nodeExists (RandomNode tofind) {
+        RandomNode node = getRoot() ;
         if (node == null)  return  false ;
         boolean found = false ;
         while (node != null) {
@@ -185,8 +184,8 @@ public class BinaryTree  {
         return found  ;
     }
 
-    public Node commonAncestor (Node a, Node b) {
-        Node node = getRoot() ;
+    public RandomNode commonAncestor (RandomNode a, RandomNode b) {
+        RandomNode node = getRoot() ;
         if (node == null) return null ;
         if (a == null || b == null)  return null ;
         if (nodeExists(a) == false || nodeExists(b) == false) return null ;
@@ -216,7 +215,7 @@ public class BinaryTree  {
         System.out.println();
     }
 
-    public void postOrderRec(Node<Integer> node ) {
+    public void postOrderRec(RandomNode<Integer> node ) {
         if (node == null) return ;
         postOrderRec(node.getLeft());
         postOrderRec(node.getRight());
@@ -230,30 +229,30 @@ public class BinaryTree  {
         System.out.println();
     }
 
-    public void preOrderRec(Node<Integer> node ) {
+    public void preOrderRec(RandomNode<Integer> node ) {
         if (node == null) return ;
         System.out.print (node.getData() + " ") ;
         preOrderRec(node.getLeft());
         preOrderRec(node.getRight());
     }
 
-    public void preOrderIter (Node<Integer> node){
+    public void preOrderIter (RandomNode<Integer> node){
         if (node == null) return;
-        Stack<Node<Integer>> stack = new Stack<>() ;
+        Stack<RandomNode<Integer>> stack = new Stack<>() ;
         stack.push(node) ;
 
         while (stack.size() != 0) {
-            Node<Integer> cur = stack.pop() ;
+            RandomNode<Integer> cur = stack.pop() ;
             System.out.print(cur.getData() + " ");
             if (cur.getRight() != null) stack.push(cur.getRight()) ;
             if (cur.getLeft() != null) stack.push(cur.getLeft()) ;
         }
     }
 
-    public void inOrderIter (Node<Integer> node){
+    public void inOrderIter (RandomNode<Integer> node){
         if (node == null) return;
-        Stack<Node<Integer>> stack = new Stack<>() ;
-        Node <Integer> cur = node ;
+        Stack<RandomNode<Integer>> stack = new Stack<>() ;
+        RandomNode<Integer> cur = node ;
 
         while (cur != null || stack.size() != 0) {
             while (cur != null) {
@@ -266,14 +265,14 @@ public class BinaryTree  {
         }
     }
 
-    public void postOrderIter (Node<Integer> node){
+    public void postOrderIter (RandomNode<Integer> node){
         if (node == null) return;
-        Stack<Node<Integer>> stack = new Stack<>() ;
-        Stack<Node<Integer>> poststack = new Stack<>() ;
+        Stack<RandomNode<Integer>> stack = new Stack<>() ;
+        Stack<RandomNode<Integer>> poststack = new Stack<>() ;
         stack.push (node) ;
 
         while (stack.size() > 0) {
-            Node<Integer> cur = stack.pop() ;
+            RandomNode<Integer> cur = stack.pop() ;
             poststack.push(cur) ;
             if (cur.getLeft() != null) stack.push(cur.getLeft()) ;
             if (cur.getRight() != null)  stack.push(cur.getRight()) ;
@@ -287,8 +286,8 @@ public class BinaryTree  {
     public boolean checkIdentical (BinaryTree mine) {
         if (root == null && mine == null) return true ;
         if (root == null|| mine == null) return false ;
-        Queue<Node> one = new LinkedList<>() ;
-        Queue<Node> other = new LinkedList<>() ;
+        Queue<RandomNode> one = new LinkedList<>() ;
+        Queue<RandomNode> other = new LinkedList<>() ;
         one.add(this.getRoot()) ;
         other.add(mine.getRoot()) ;
 
@@ -300,8 +299,8 @@ public class BinaryTree  {
         while (one.size() > 0 && other.size() > 0) {
 
             while (oneCount != 0) {
-                Node thisOne = one.remove() ;
-                Node otherOne = other.remove() ;
+                RandomNode thisOne = one.remove() ;
+                RandomNode otherOne = other.remove() ;
 
                 if (thisOne.getData() != otherOne.getData())  return false ;
                 oneCount-- ;

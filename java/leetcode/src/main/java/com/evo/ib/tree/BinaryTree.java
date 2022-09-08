@@ -1,8 +1,6 @@
 package com.evo.ib.tree;
 
 
-import com.evo.ib.bt.Node;
-
 import java.util.*;
 
 public class BinaryTree {
