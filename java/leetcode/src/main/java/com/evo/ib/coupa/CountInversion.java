@@ -62,11 +62,53 @@ public class CountInversion {
 
         return count;
     }
+
+    public static int merAndCount (int [] arr, int left, int right) {
+        int count = 0 ;
+
+        if (left < right) {
+            int middle = (right+left) / 2 ;
+
+            count += merAndCount(arr, left, middle) ;
+            count += merAndCount(arr, middle+1, right) ;
+            count += merSortAndCount (arr, left, middle, right) ;
+        }
+        return  count ;
+    }
+
+    public static int merSortAndCount(int [] arr, int left, int middle, int right) {
+        int [] thisleft = Arrays.copyOfRange(arr, left, middle+1) ;
+        int [] thisright = Arrays.copyOfRange(arr, middle+1, right+1) ;
+
+        int i = 0 ;
+        int j = 0 ;
+        int k = left ;
+        int swaps = 0 ;
+
+        while (i < thisleft.length && j < thisright.length) {
+            if (thisleft[i] < thisright[j]) {
+                arr[k++] = thisleft[i++];
+            } else {
+                arr[k++] = thisright[j++];
+                swaps += (middle + 1) - (left + i);
+            }
+        }
+            while (i < thisleft.length){
+                arr[k++] = thisleft[i++] ;
+            }
+            while (j < thisright.length) {
+                arr[k++] = thisright[j++] ;
+            }
+
+        return  swaps ;
+    }
     public static void main(String[] args)
     {
         int[] arr = { 10, 9, 8, 7, 6, 5,4,3,2,1};
 
         System.out.println(mergeSortAndCount(arr, 0, arr.length - 1));
+        int[] arr1 = { 10, 9, 8, 7, 6, 5,4,3,2,1};
+        System.out.println(merAndCount(arr1, 0, arr.length-1));
     }
 
 }

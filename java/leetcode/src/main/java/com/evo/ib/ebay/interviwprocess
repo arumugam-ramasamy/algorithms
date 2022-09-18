@@ -1,0 +1,97 @@
+The Technical Phone Screen Interview
+The Technical Phone Screen round is a remote interview conducted by a hiring manager who is driving the recruitment of software engineers. This round is mostly focused on coding and analytical problem-solving. 
+
+Your knowledge of fundamental concepts in Data Structures and Algorithms is evaluated through a coding problem that you’re asked to solve. The problem won’t be too difficult to solve - your general approach to problem-solving, how you account for time and space complexities, and your thought process in arriving at the optimal solution are key areas that are evaluated. 
+
+The Technical Phone Screen lasts 30-40 minutes. If everything goes well, you’ll be invited to the eBay On-site interview. 
+
+The On-site Interview
+The real test of your abilities as a programmer is tested in the on-site interview. Depending on the position you’re applying to, the on-site can have 3-4 rounds. If you’re applying for a domain-specific role, the on-site will have an additional domain round conducted by domain experts at eBay. 
+
+The on-site consists of the following rounds:
+
+1-2 coding rounds, where your knowledge of data structures and algorithms is tested through coding problems of medium-hard difficulty. How you Brute-force problem solutions, and your ability to write error-free code, will give you the points you need in this round. 
+1-2 design rounds, where your ability to build a scalable system by accounting for a bunch of components is evaluated. You could be asked questions specific to eBay’s platform, especially those around databases, network security, caching, API modeling, and sharding. 
+1 behavioral round, where the cultural-fit aspect is evaluated. You’ll be asked questions about your experience with companies, responses to workplace-related situations, and crucial learnings from past projects. 
+eBay Technical Interview Questions
+Based on the rounds in the interview process, the interview questions asked at eBay’s interview typically fall under three main categories. 
+
+eBay Coding Interview Questions
+eBay Systems Design Interview Questions
+eBay Behavioral Interview Questions
+Let’s look at some interview questions from each of these categories.
+
+eBay Coding Interview Questions
+Acing coding interviews is crucial to making it past the on-site interview and landing an offer. Below is the list of topics to prepare for the eBay coding interview. 
+
+Arrays, strings, and linked lists
+Sorting algorithms — quicksort, merge sort, heap sort, etc.
+Hash tables and queues
+Recursion
+Trees and graphs
+Graph algorithms, including greedy algorithms
+Dynamic programming
+Here are some sample coding interview questions to practice for the eBay interview:
+
+
+eBay Systems Design Interview Questions
+Systems Design is an extremely important part of the On-site interview. Below is the list of topics to prepare for the interview:
+
+Networking
+Scaling distributed applications
+Replication
+Sharding techniques
+Cache
+Distributed file systems
+Object modeling
+Database management Systems
+API modeling
+Here are some sample systems design interview questions to expect at eBay’s technical interview. 
+
+How would you design an IP blocking system?
+How would you design a file-sharing system like Dropbox?
+Design an API rate limiter?
+How would you ensure the security of a scalable distributed system?
+What are your thoughts on designing an e-commerce platform like eBay or Amazon?
+How would you go about designing a voting system where voters cast their votes, and the results are automatically tabulated?
+How would you integrate an end-to-end notification service on the eBay e-commerce platform?
+How would you go about designing an online food-delivery platform? What are the aspects you’ll have to account for?
+How would you go about designing a cab-hailing service?
+ eBay Behavioral Interview Questions
+Behavioral questions are typically asked to understand your attitude and personality in general. You can also expect a few questions on learnings from past projects to give recruiters an idea of your past project experiences. 
+
+Behavioral questions are primarily centered around:
+
+Past experiences and learnings from past projects
+Your attitude and characteristics of your personality
+How you respond to workplace-related situations
+Below are some sample behavioral interview questions asked at eBay’s technical interview:
+
+Tell us about the most challenging project you worked on 
+Tell us about a time when you had to make a big decision for a crucial client project
+Tell us about a time when you disagreed with your superior
+Tell us about a conflict you had at your workplace
+What, according to you, are important aspects to maintain productivity at the workplace
+How would you avoid distractions at work?
+What lessons have you learned from the most challenging project you worked on?
+Tell us about a time when you had an uncooperative coworker and how you dealt with the situation?
+What are your thoughts on taking periodic vacations?
+Tell us about a time when a project suffered because of your superior’s inability to make tough decisions.
+Check out these Behavioral Interview Questions for Software Engineers and Developers for more insights on behavioral interviews. 
+
+FAQs on eBay Tech Interviews
+Q. What coding concepts are important for the eBay interview?
+
+Coding problems asked at the eBay interview are based on concepts in algorithms and data structures. Arrays, strings, linked lists, sorting algorithms, hash tables, queues, recursion, trees, graph algorithms, and dynamic programming are some of the key coding topics for the interview.
+
+Q. What systems design concepts are important for the eBay interview?
+
+Systems design is a critical component of eBay’s On-site interview. Questions asked are based on topics like concurrency, data platforms, replication, sharding techniques, cache, distributed file systems, object modeling, database management systems, API modeling, and network protocols.
+
+Tips to Crack the eBay Technical Interview
+For comprehensive tips on acing technical interviews at the biggest companies, check out this complete guide on cracking coding interviews at top tech companies. 
+
+If you’ve started prepping for your upcoming technical interview, there’s no better way to prepare for it than enrolling for Interview Kickstart’s Technical Interview Masterclass. It’s an interview prep program that has helped thousands of engineers ace the most complex technical interviews for positions across the board. 
+
+We also have 17 domain-specific courses built to help engineers ace domain interviews at FAANG and other big tech companies.
+

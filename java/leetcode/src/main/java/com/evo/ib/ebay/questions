@@ -3,8 +3,20 @@ Questions about recursion and string
 Sorting, simple algorithms, text parsing on the same problem getting progressively harder
 - Coding question: Given an array that represent a row of seats in a movie theater, where 0 represents an empty seat and 1 represents a occupied seat, return the index of a empty seat that is the most socially distant from the other patrons.
 
-Round 1 : (Hackerearth based test) [Time : 1h15m]  This round had 2 questions.   Given an array of size N and K queries, find the number of segments containing the index(from queires) which is leftmost or rightmost and the number at index is >= each elements of that segment Eg : arr[] = [1,2,3] K = [3] -> o/p : 3 ([3],[2,3][1,2,3]) Modification of this question(https://leetcode.com/problems/find-k-closest-elements/). Verdict: cleared  Round 2 : F2F [Time : 1h]  Given an array and a target sum k, find all a[i] + a[j] = k. Follow up: handle if the array has both duplicate and non-duplicate elements Find the first non-repeating character in the string (with only lowercase letters) https://leetcode.com/problems/first-unique-character-in-a-string/. Follow up : i ) contains both lowercase & uppercase ii) case-insensitive & case sensitive iii) in O(1) space complexity Verdict: cleared  Round 3 : F2F [Time : 1h]  Find if a linked list is a palindrome [expected time & space complexity : O(n) & O(1)]. https://leetcode.com/problems/palindrome-linked-list/ Find the diameter of the binary tree(https://leetcode.com/problems/diameter-of-binary-tree/) Validate if a tree is BST(https://leetcode.com/problems/validate-binary-search-tree/)
-Coding question: Implement your own string comparator. Check if a linked list is palindrome. Implement BST.  System design question: Flash sale system Flight booking system 
+Round 1 : (Hackerearth based test) [Time : 1h15m]  This round had 2 questions.
+Given an array of size N and K queries, find the number of segments containing the index(from queires) which is leftmost or rightmost and the number at index is >= each
+elements of that segment Eg : arr[] = [1,2,3] K = [3] -> o/p : 3 ([3],[2,3][1,2,3]) Modification of this question(https://leetcode.com/problems/find-k-closest-elements/).
+ Round 2 : F2F [Time : 1h]  Given an array and a target sum k, find all a[i] + a[j] = k. Follow up: handle if the array has both duplicate and non-duplicate elements
+ Find the first non-repeating character in the string (with only lowercase letters) https://leetcode.com/problems/first-unique-character-in-a-string/.
+ Follow up : i ) contains both lowercase & uppercase ii) case-insensitive & case sensitive iii) in O(1) space complexity Verdict: cleared
+ Round 3 : F2F [Time : 1h]  Find if a linked list is a palindrome [expected time & space complexity : O(n) & O(1)]. https://leetcode.com/problems/palindrome-linked-list/
+ Find the diameter of the binary tree(https://leetcode.com/problems/diameter-of-binary-tree/)
+ Validate if a tree is BST(https://leetcode.com/problems/validate-binary-search-tree/)
+Coding question:
+Implement your own string comparator.
+Check if a linked list is palindrome.
+Implement BST.
+System design question: Flash sale system Flight booking system 
 Given 2 lists and asked if the list is subset of other or not? Questions on space and time complexity. Improve the solution on space complexity
  
 Answer Question
@@ -84,4 +96,40 @@ what is deadlock and also asked for a tool or way to identify dead lock. ( basic
 Give 2 stack and implement a Queue.
 
 What are Java design patters, explain 'xxx' design pattern.
+
+For an array of integers and unique values, write a program code to decipher if the sum of any two integers in the array is equal to a given value. 
+For a given two-dimensional array with integers of unique values, write a program to make the entire column or row of the array zero if any element in the array is zero.
+You are given two linked lists. Each of the linked lists has an integer value. Write a program to add the two linked lists and return the value of their sum. 
+You’re given the root of a binary tree. Write a code to show the node values at every level. 
+For a given binary search tree where two nodes of the tree are swapped, write a program to correct the binary search tree. 
+For a given rotated array that is sorted, write a program code to find a particular element in the array. 
+Write a program to check if a binary tree is a valid binary search tree. 
+Write a program to find if the permutation of a string (given) is a palindrome or not. 
+Write an error-free program to check if a given binary tree is balanced or not. 
+You are provided with a string in the form of a sentence. Write a program to display the characters of the string in reverse order. 
+For a given String S, write a program to find non-letter substrings that are palindromes. 
+You’re given a list of stock prices with the value of buy and sell for each stock. Write a code to determine at what level of buy and sell maximum profit can be derived. 
+For a given unsorted array with positive integers from 1 to n and one missing element. Write a program to find the missing element in the unsorted array. 
+Write an error-free program to validate a given IP address. 
+Write an error-free program to clone a given linked list “L” with the next arbitrary pointer. 
+For more practice problems and solutions, visit our Problems Page to access a vast list of coding problems.  
+
+
+1st: one medium LC question + technical deep-dive into some frameworks.
+- 2nd: one easy LC question + API design + some high-level system design questions + questions about cache, SSL
+- 3rd: behavioral + career goals
+- 4th: high-level system design of marketplace system + one easy LC question.
+- 5th: questions about REST concepts and OOP concepts + one medium LC question.
+Overall, I think the coding questions were doable if you practice enough. The design questions were also straightforward with enough prep work/experience. The technical framework deep-dive was the most difficult as it involves the theory behind some of the technology I used in day-2-day work but barely explored them enough.
+I heard back from the recruiter about 1 week later that an offer is coming.
+
+
+Coding question:
+Implement your own string comparator.
+Check if a linked list is palindrome.
+Implement BST.
+
+System design question:
+Flash sale system
+Flight booking system
 
