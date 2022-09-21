@@ -1,0 +1,26 @@
+The First coding is LC 300, the second coding is letting you calculate the frequency of maximum value,
+ and the third coding is LC 1611.
+
+Simple Data structure and algorithm question.
+Some questions on Rest security, multithreading, java procedures
+
+The first round had technical questions on Java.
+
+The second and third round questions were also based on the concepts of Java and also
+SAML and OAUTH arch(as I had written it in the resume). The last directorial round is quite easy,
+ they go through the resume
+
+Architecture of the system I worked on.
+Design patterns (briefly).
+Dictionary(hash function), LinkedList, Trees, Graphs.
+API design, websockets, Performance optimization.
+
+Networking concept and coding.
+Finding longest matching string in the given two strings.
+
+It was for Java Microservices
+1 round on System design and current project description
+Other 3 rounds were similar.. Core Java, Spring boot. Transaction handling, coding
+
+bit operation. Exchange a given binary number's even digits and odd digits (not taking the complement).
+ For example, input = 23 (b00010111), output = 43 (b00101011).
