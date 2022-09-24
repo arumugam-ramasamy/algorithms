@@ -8,14 +8,19 @@ Sorting, simple algorithms, text parsing on the same problem getting progressive
 
 Round 1 : (Hackerearth based test) [Time : 1h15m]  This round had 2 questions.
 Given an array of size N and K queries, find the number of segments containing the index(from queires) which is leftmost or rightmost and the number at index is >= each
-elements of that segment Eg : arr[] = [1,2,3] K = [3] -> o/p : 3 ([3],[2,3][1,2,3]) Modification of this question(https://leetcode.com/problems/find-k-closest-elements/).
+elements of that segment Eg : arr[] = [1,2,3] K = [3] -> o/p : 3 ([3],[2,3][1,2,3])
+Modification of this question(https://leetcode.com/problems/find-k-closest-elements/).
 
- Round 2 : F2F [Time : 1h]  Given an array and a target sum k, find all a[i] + a[j] = k. Follow up: handle if the array has both duplicate and non-duplicate elements
+ Round 2 : F2F [Time : 1h]  Given an array and a target sum k, find all a[i] + a[j] = k.
+  Follow up: handle if the array has both duplicate and non-duplicate elements
 
- Find the first non-repeating character in the string (with only lowercase letters) https://leetcode.com/problems/first-unique-character-in-a-string/.
- Follow up : i ) contains both lowercase & uppercase ii) case-insensitive & case sensitive iii) in O(1) space complexity Verdict: cleared
+ Find the first non-repeating character in the string (with only lowercase letters)
+  https://leetcode.com/problems/first-unique-character-in-a-string/.
+ Follow up : i ) contains both lowercase & uppercase ii) case-insensitive
+  & case sensitive iii) in O(1) space complexity Verdict: cleared
 
- Round 3 : F2F [Time : 1h]  Find if a linked list is a palindrome [expected time & space complexity : O(n) & O(1)]. https://leetcode.com/problems/palindrome-linked-list/
+ Round 3 : F2F [Time : 1h]  Find if a linked list is a palindrome [expected time & space complexity :
+ O(n) & O(1)]. https://leetcode.com/problems/palindrome-linked-list/
 
  Find the diameter of the binary tree(https://leetcode.com/problems/diameter-of-binary-tree/)
 
@@ -28,7 +33,8 @@ Coding question:
 
  Implement BST.
 
- Given 2 lists and asked if the list is subset of other or not? Questions on space and time complexity. Improve the solution on space complexity
+ Given 2 lists and asked if the list is subset of other or not? Q
+ uestions on space and time complexity. Improve the solution on space complexity
  
 Answer Question
 
@@ -48,8 +54,10 @@ Leetcode medium questions : palindrome detections, cycle in a linked list, next 
 
 
 
-The coding interview is a task to code on: services, async processing, big data. 2.5 hours to code, then review.
-write a multithreaded code that access a REST service and prints out a report out of the data gathered
+The coding interview is a task to code on: services, async processing,
+big data. 2.5 hours to code, then review.
+write a multithreaded code that access a REST service and prints out a
+report out of the data gathered
 
 
 
@@ -58,7 +66,9 @@ counter=0
  what are the possible values of counter
 
 . Write program to identify if two subnets collide.
-Write program to convert a BST to heap (such as the largest number is root, the second largest is to the left of root, the third largest to right of root and so on)
+Write program to convert a BST to heap
+(such as the largest number is root, the second largest is to the left of root,
+ the third largest to right of root and so on)
 Memory tuning on millions of product objects.
 
 explain priority queues
