@@ -1,0 +1,64 @@
+package com.evo.ib.top.word;
+
+import java.util.*;
+
+class WordNode {
+	String word;
+	int numberofSteps;
+
+	public WordNode(String word, int numSteps) {
+		this.word = word;
+		this.numberofSteps = numSteps;
+	}
+}
+
+public class WordLadder {
+
+	public static int ladderLength(String beginWord, String endWord, String[] wordList) {
+		Set<String> wordDict = new HashSet<>();
+		for (int i = 0 ; i < wordList.length; i++) {
+			wordDict.add(wordList[i]);
+		}
+		LinkedList<WordNode> ll = new LinkedList<WordNode>();
+		ll.add(new WordNode(beginWord, 1));
+		wordDict.add(endWord);
+		/*Map<String, Set<String>> singleHitList = new HashMap<>() ;
+		for (int i = 0 ; i < beginWord.length() ; i++) {
+			String starWord = "*" + beginWord
+		}*/
+
+		while (ll.size() > 0) {
+			WordNode top = ll.remove();
+			if (top.word.equals(endWord))
+				return top.numberofSteps;
+
+			char[] arr = top.word.toCharArray();
+			for (int i = 0; i < arr.length; i++) {
+				for (char c = 'a'; c <= 'z'; c++) {
+					char temp = arr[i];
+					if (arr[i] != c) {
+						arr[i] = c;
+					}
+
+					String newWord = new String(arr);
+					if (wordDict.contains(newWord)) {
+						ll.add(new WordNode(newWord, top.numberofSteps + 1));
+						wordDict.remove(newWord);
+					}
+					arr[i] = temp;
+				}
+			}
+		}
+		return 0;
+	}
+
+	public static void main(String[] args) {
+		String start = "hit";
+		String end = "cog";
+		String[] dict = {"hot", "dot", "dog", "lot", "log"};
+		System.out.println(ladderLength(start, end, dict));
+
+	}
+
+}
+

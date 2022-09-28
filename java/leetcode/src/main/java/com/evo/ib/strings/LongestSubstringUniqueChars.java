@@ -90,7 +90,7 @@ public class LongestSubstringUniqueChars {
     }
 
     public static void main(String[] args) {
-        System.out.println(longestBestUniwueChar("pwwkew"));
+        System.out.println(longestBestUniwueChar("AAABCDEF"));
     }
 
 }
