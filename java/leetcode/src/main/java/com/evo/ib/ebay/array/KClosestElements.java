@@ -29,6 +29,14 @@ public class KClosestElements {
 			}
 			count++ ;
 		}
+		while (count < k && left >= 0) {
+			numList.add(arr[left--]) ;
+			count++ ;
+		}
+		while (count < k && right < arr.length ){
+			numList.add(arr[right++]) ;
+			count++ ;
+		}
 		Collections.sort(numList);
 		return numList ;
 	}
@@ -47,11 +55,11 @@ public class KClosestElements {
 	}
 
 	public static void main(String[] args) {
-		int arr[] = {12, 16, 22, 30, 35, 39, 42,
-				45, 48, 50, 53, 55, 56
-		};
+//		int arr[] = {12, 16, 22, 30, 35, 39, 42,
+//				45, 48, 50, 53, 55, 56
+		int arr[] = {1,2,3,4,5};
 		int n = arr.length;
-		int x = 35, k = 4;
+		int x = -1, k = 4;
 		System.out.println ( kClosestElements(arr, k, x)) ;
 	}
 }

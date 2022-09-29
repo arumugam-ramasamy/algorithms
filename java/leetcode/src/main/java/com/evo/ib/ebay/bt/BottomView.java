@@ -9,16 +9,25 @@ import java.util.*;
 public class BottomView {
 
     public static List<Integer> bottomView (TreeNode tree){
-        List <Integer> list = new ArrayList<>() ;
-        Map<Integer, List<Integer>> bottomView = new HashMap<>() ;
-        if (tree == null) return null ;
-        Map <Integer, List<Integer>> btView = new HashMap<>() ;
-        List<Integer> valSet = new ArrayList<>() ;
-        valSet.add(tree.val) ;
-        btView.put(0, valSet)  ;
-        Queue<TreeNode> treelist = new LinkedList<>() ;
-        treelist.add(tree) ;
+       if (tree == null) return null ;
+       Map <Integer, List<Integer>> bottomMap = new HashMap<>() ;
+       getBottomView(tree, 0, bottomMap) ;
+        return null ;
+    }
 
-        return list ;
+    public static void getBottomView(TreeNode root,   int mapIndex, Map<Integer, List<Integer>> btView) {
+        if (root == null) return ;
+        if (btView.containsKey(mapIndex)) {
+            List<Integer> curList = btView.get(mapIndex) ;
+            curList.add(root.val) ;
+            btView.put(mapIndex, curList) ;
+        }
+        else {
+            List<Integer> valList = new ArrayList<>() ;
+            valList.add(root.val) ;
+            btView.put(mapIndex, valList) ;
+        }
+        if (root.left != null) getBottomView(root.left, mapIndex-1, btView);
+        if (root.right != null) getBottomView(root.right, mapIndex+1, btView);
     }
 }
