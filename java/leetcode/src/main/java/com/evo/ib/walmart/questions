@@ -9,3 +9,16 @@ Make a triangle using HTML and CSS.
 Create a memorized function.
 Implement merge sort.
 Implement a reservation algorithm.
+- You are given an array of integers nums, there is a sliding window of size k which is moving from the very left of the array to the very right.
+You can only see the k numbers in the window. Each time the sliding window moves right by one position.
+
+Return the max sliding window.
+Standard system design questions for LLD and HLD.
+LRU cache
+Non repeating longest substring
+Valid Sudoku
+one hour of coding and one hour of behavioral questions. three coding questions, difficulty: one easy and two medium.
+sliding window, longest common string, and shortest completing words. Not difficult overall
+Two coding questions
+1) Coin change
+2) Design LRU cache
