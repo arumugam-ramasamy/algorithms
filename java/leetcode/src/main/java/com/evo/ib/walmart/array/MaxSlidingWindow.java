@@ -59,7 +59,7 @@ public class MaxSlidingWindow {
         return res ;
     }
 
-    public static Integer maxSlidingWindow1 (int[] arr, int k) {
+    public static Integer maxSlidingWindow10 (int[] arr, int k) {
         if (arr == null || arr.length < k) return  null ;
 
         int windowSum = 0 ;
