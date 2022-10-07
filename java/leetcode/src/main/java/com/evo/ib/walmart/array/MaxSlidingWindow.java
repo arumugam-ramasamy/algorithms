@@ -45,7 +45,7 @@ public class MaxSlidingWindow {
         }
         return res ;
     }
-    public int[] maxSlidingWindow1(int[] nums, int k) {
+    public int[] maxSlidingWindow10(int[] nums, int k) {
         if (nums == null || nums.length < k) return  null ;
         int [] res = new int[nums.length - k] ;
         res[0] = Integer.MIN_VALUE ;
