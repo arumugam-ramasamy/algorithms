@@ -1,0 +1,44 @@
+DB Schema
+
+Online movie reservation system
+
+Use cases:
+1. When user go to home page,
+we want to show all current movies (7 days from today - future) in the city
+2. User selects a movie - display all theaters and shows with times
+3. User selects a theater and show - show all seats
+4. User buys the tickets.
+
+Tables and SQL queries
+format to follow:
+
+tableName: ID (PK), FID (FK), col1, col2, ... [constraints]
+tableName2: ID (PK), FID (FK), col1, col2, ... [constraints]
+
+<Trademark>
+
+Theater                 Movie               Seat                                    shows, theater, movie id
+ID                     Movie  Id             Id
+                                              Theater id
+                                              show id
+Lat                    Movie  name            Seat array
+Long                   Description            Seat Available boolean string         date
+Address                Image File (path)                                            show times (list)
+Zipcode
+city
+movie id
+movie name
+Shows ID
+Seating Id
+date
+
+Select theater id, movie name from theater where zipcode == zipcode customer where (modified data>= currentdate && modified date <= currentdate + 7) , the zipcode / distance should be less that what customer is requesting (temporary view)
+
+Theater : ID (index) (zipcode) (movie id foregin key)  Theater name, moviename, image file
+
+select theater id, show times,  movie id where movie id == selected movie id, show.showid == movie.showid from temporary view
+
+    theater id (PK) showid  FK)  Movie Name, Movie img, show times
+
+
+
