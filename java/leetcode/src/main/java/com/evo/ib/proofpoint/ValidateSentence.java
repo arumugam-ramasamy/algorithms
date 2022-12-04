@@ -37,15 +37,15 @@ public class ValidateSentence {
         
         int count = 0 ; 
         
-        sentence = StringUtils.chop(sentence) ;
-        String [] words. = sentence.split (" ") ;
+        //sentence = StringUtils.chop(sentence) ;
+        String [] words = sentence.split (" ") ;
         int numwords = words.length ; 
         int quotescount = 0 ;
         //Stack<Character> parens = new Stack<>() ;
         int parenscount = 0 ;
         while (count < numwords) {
             int wordind = 0 ;
-            String word = words[i] ;
+            String word = words[count] ;
             word = word.trim() ;
             
             boolean number = true ;
@@ -60,8 +60,7 @@ public class ValidateSentence {
             }
            
             if (number == true) {
-                if (Integer.parseInt(word)
- < 13)) return false ;
+                if (Integer.parseInt(word)  < 13) return false ;
             }
             count++ ;
         }

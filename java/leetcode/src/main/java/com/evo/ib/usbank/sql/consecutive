@@ -1,0 +1,29 @@
+SELECT
+    min(num) AS num, count(*) AS count
+FROM
+    (SELECT
+        id, num, 
+        (SELECT 
+            sum(start_of_series) 
+        FROM 
+            (SELECT
+                id, num, 
+                case when 
+                    (SELECT num FROM tbl t_prv WHERE t_prv.id < tbl.id ORDER BY id DESC LIMIT 1) <=> num 
+                then 0
+                else 1 
+                end AS start_of_series 
+            FROM
+                tbl
+            ) AS t1 
+        WHERE 
+            t1.id <= tbl.id
+        ) AS series_number
+    FROM
+        tbl
+    ) AS t2
+GROUP BY
+    series_number
+ORDER BY
+    series_number
+;
